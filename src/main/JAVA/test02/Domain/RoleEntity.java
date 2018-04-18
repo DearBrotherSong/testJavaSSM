@@ -1,8 +1,9 @@
 package test02.Domain;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
-public class RoleEntity {
+public class RoleEntity implements Serializable {
     private Long id;
     private String name;
     private String description;

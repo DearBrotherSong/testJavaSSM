@@ -2,10 +2,11 @@ package test02.Domain;
 
 import org.springframework.stereotype.Component;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 //用户实体类
-public class CustomerEntity {
+public class CustomerEntity implements Serializable{
     private Long id;
     private String userName;
     private String nickName;

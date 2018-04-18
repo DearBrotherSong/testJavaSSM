@@ -1,8 +1,9 @@
 package test02.Domain;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
-public class DepartmentEntity {
+public class DepartmentEntity implements Serializable {
     private Long id;
     private String name;
     private Long parentId;

@@ -1,6 +1,8 @@
 package test02.Domain;
 
-public class CustomerRoleEntity {
+import java.io.Serializable;
+
+public class CustomerRoleEntity implements Serializable {
     private Long customerId;
 
     private Long roleId;
