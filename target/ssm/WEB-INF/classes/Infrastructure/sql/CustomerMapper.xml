@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test02.Infrastructure.sql.CustomerMapper">
+
+    <resultMap id="BaseResultMap" type="test02.Domain.CustomerEntity" >
+        <id column="id" property="id" jdbcType="BIGINT" />
+        <result column="userName" property="userName" jdbcType="VARCHAR" />
+        <result column="nickName" property="nickName" jdbcType="VARCHAR" />
+        <result column="email" property="email" jdbcType="VARCHAR" />
+        <result column="creation_time" property="creation_time" jdbcType="TIMESTAMP" />
+        <result column="last_login_time" property="last_loin_time" jdbcType="TIMESTAMP" />
+        <result column="department_id" property="department_id" jdbcType="BIGINT" />
+        <result column="password" property="password" jdbcType="VARCHAR" />
+        <result column="state" property="state" jdbcType="INTEGER" />
+    </resultMap>
+
+    <select id="getById" resultMap="BaseResultMap" parameterType="Long">
+        SELECT id,userName,nickName,email,creation_time,last_login_time,department_id,state
+        FROM customer
+        WHERE state=0 AND id=#{id};
+    </select>
+
+    <select id="getByUserName" resultMap="BaseResultMap" parameterType="String">
+        SELECT customer.id,password,userName,nickName,email,creation_time,last_login_time,customer.department_id,department.name department_name
+        FROM customer LEFT JOIN department
+        ON customer.department_id=department.id
+        WHERE  customer.state=0
+        AND department.state=0
+        AND username=#{userName};
+    </select>
+
+    <select id="getByDepartmentIds" resultMap="BaseResultMap">
+        SELECT id,userName,nickName,email,creation_time,last_login_time,department_id,passWord,state
+        FROM customer
+        WHERE  state=0 AND
+        department_id IN
+        <foreach collection="deptIds" index="index" item="deptId" open="(" separator="," close=")">
+            #{deptId}
+        </foreach>;
+    </select>
+
+    <select id="getBasicByEmailOrName" resultMap="BaseResultMap">
+        SELECT id,userName,nickName,email,creation_time,last_login_time,department_id,state
+        FROM customer
+        WHERE state=0
+        AND IF(#{id} > 0,id <![CDATA[ <> ]]> #{id},1)
+        AND (userName=#{userName} OR email=#{email} OR nickName=#{nickName})
+    </select>
+
+    <select id="getBasicByEmail" resultMap="BaseResultMap" parameterType="String">
+        SELECT id,userName,nickName,email,creation_time,last_login_time,department_id,state
+        FROM customer
+        WHERE state=0 AND email=#{email} ;
+    </select>
+
+    <select id="getUserMessDetailById" resultType="map" parameterType="Long">
+        SELECT customer.id,userName,nickName,email,creation_time,last_login_time,customer.department_id,department.name department_name
+        FROM customer LEFT JOIN department
+        ON customer.department_id=department.id
+        WHERE  customer.state=0 AND department.state=0 AND customer.id=#{id};
+    </select>
+
+    <select id="list" resultType="map">
+        SELECT customer.id,userName,nickName,email,creation_time,last_login_time,customer.department_id,department.name department_name
+        FROM customer LEFT JOIN department
+        ON customer.department_id=department.id
+        WHERE
+        customer.state=0
+        AND department.state=0
+        AND IF(LENGTH(#{idPath})>0,department.idPath LIKE "%"#{idPath}"%",1)
+        AND IF(LENGTH(#{userName})>0,customer.userName LIKE "%"#{userName}"%",1)
+        ORDER BY
+        IF(LENGTH(#{userName})>0,REPLACE(userName,#{userName},''),userName)
+        LIMIT #{limit}
+        offset #{offset};
+
+    </select>
+
+    <select id="getListTotal" resultType="int">
+        SELECT COUNT(customer.id)
+        FROM customer LEFT JOIN department
+        ON customer.department_id=department.id
+        WHERE
+        customer.state=0
+        AND department.state=0
+        AND IF(LENGTH(#{idPath})>0,department.idPath LIKE "%"#{idPath}"%",1)
+        AND IF(LENGTH(#{userName})>0,customer.userName LIKE "%"#{userName}"%",1)
+    </select>
+
+    <insert id="register" keyColumn="id" parameterType="test02.Domain.DepartmentEntity" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO
+        customer(userName,nickName,email,creation_time,department_id,password,state)
+        VALUES(#{userName},#{nickName},#{email},#{creation_time},#{department_id},#{password},#{state});
+    </insert>
+
+    <update id="updateLastLoginTime">
+        UPDATE customer
+        SET last_login_time=#{loginTime}
+        WHERE  state=0 AND id=#{id};
+    </update>
+
+    <update id="updatePassword">
+        UPDATE customer
+        SET password=#{newPass}
+        WHERE  state=0 AND id=#{id};
+    </update>
+
+    <update id="updateCustomerBasic">
+        UPDATE customer
+        SET email=#{email},nickName=#{nickName},department_id=#{departmentId}
+        WHERE state=0 AND id=#{id};
+    </update>
+
+    <update id="deleteCustomer" parameterType="Long">
+        UPDATE customer
+        SET state=1
+        WHERE  state=0 AND id=#{id};
+    </update>
+</mapper>
