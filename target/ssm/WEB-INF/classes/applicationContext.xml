@@ -60,11 +60,5 @@
         </tx:attributes>
     </tx:advice>
 
-    <context:property-placeholder location="classpath:thriftConfig.properties"/>
-    <!-- 服务端注册 -->
-    <bean id="service" class="test02.thrift.Service" init-method="start">
-
-    </bean>
-
-
+    <bean id="thriftServerProxy" class="test02.thrift.ThriftServerProxy" init-method="start"  ></bean>
 </beans>

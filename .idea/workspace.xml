@@ -2,117 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2795b5c5-a3cc-42b3-b2e2-420fdd56fc53" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/JAVA/test02/thrift/Client.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/JAVA/test02/thrift/Service.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftApplication.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/JAVA/test02/thrift/clientTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/JAVA/test02/thrift/thrift.thrift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/thriftConfig.properties" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/assertj-core-1.5.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/cglib-nodep-2.1_3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/commons-exec-1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/commons-pool2-2.4.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/cssparser-0.9.14.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/guava-14.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/htmlunit-2.15.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/htmlunit-core-js-2.15.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/httpclient-4.3.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/httpcore-4.3.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/httpmime-4.3.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/jedis-2.9.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/jetty-http-8.1.15.v20140411.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/jetty-io-8.1.15.v20140411.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/jetty-util-8.1.15.v20140411.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/jetty-websocket-8.1.15.v20140411.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/jna-3.4.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/json-20080701.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/json-path-0.8.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/json-smart-1.1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/nekohtml-1.9.21.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/netty-3.5.2.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/platform-3.4.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/sac-1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/selenium-android-driver-2.33.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/selenium-api-2.33.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/selenium-chrome-driver-2.33.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/selenium-firefox-driver-2.33.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/selenium-htmlunit-driver-2.33.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/selenium-ie-driver-2.33.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/selenium-iphone-driver-2.33.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/selenium-java-2.33.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/selenium-remote-driver-2.33.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/selenium-safari-driver-2.33.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/selenium-support-2.33.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/serializer-2.7.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/webbit-0.4.14.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/webmagic-core-0.6.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/webmagic-extension-0.6.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/xalan-2.7.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/xercesImpl-2.11.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/xml-apis-1.4.01.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/lib/xsoup-0.3.1.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Application/CustomerController.class" afterPath="$PROJECT_DIR$/target/classes/test02/Application/CustomerController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/JAVA/test02/thrift/serviceTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftApplication.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/test02/thrift/Client.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/test02/thrift/MyThread.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/test02/thrift/Service.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/test02/thrift/ThriftApplication.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/thrift/Client.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/thrift/MyThread.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/thrift/Service.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/thrift/ThriftApplication.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Application/CustomerPublicController.class" afterPath="$PROJECT_DIR$/target/classes/test02/Application/CustomerPublicController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Application/DepartmentController.class" afterPath="$PROJECT_DIR$/target/classes/test02/Application/DepartmentController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Application/RoleController.class" afterPath="$PROJECT_DIR$/target/classes/test02/Application/RoleController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Domain/CustomerEntity.class" afterPath="$PROJECT_DIR$/target/classes/test02/Domain/CustomerEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Domain/CustomerRoleEntity.class" afterPath="$PROJECT_DIR$/target/classes/test02/Domain/CustomerRoleEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Domain/DepartmentEntity.class" afterPath="$PROJECT_DIR$/target/classes/test02/Domain/DepartmentEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Domain/RoleEntity.class" afterPath="$PROJECT_DIR$/target/classes/test02/Domain/RoleEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Domain/customer/CustomerDomain.class" afterPath="$PROJECT_DIR$/target/classes/test02/Domain/customer/CustomerDomain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Domain/department/DepartmentDomain.class" afterPath="$PROJECT_DIR$/target/classes/test02/Domain/department/DepartmentDomain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Domain/role/RoleDomain.class" afterPath="$PROJECT_DIR$/target/classes/test02/Domain/role/RoleDomain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Infrastructure/CommonTools/APIReturn.class" afterPath="$PROJECT_DIR$/target/classes/test02/Infrastructure/CommonTools/APIReturn.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Infrastructure/CommonTools/CommonTool$CodeEnum.class" afterPath="$PROJECT_DIR$/target/classes/test02/Infrastructure/CommonTools/CommonTool$CodeEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Infrastructure/CommonTools/CommonTool$SessionTime.class" afterPath="$PROJECT_DIR$/target/classes/test02/Infrastructure/CommonTools/CommonTool$SessionTime.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Infrastructure/CommonTools/CommonTool$State.class" afterPath="$PROJECT_DIR$/target/classes/test02/Infrastructure/CommonTools/CommonTool$State.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Infrastructure/CommonTools/CommonTool$Tools.class" afterPath="$PROJECT_DIR$/target/classes/test02/Infrastructure/CommonTools/CommonTool$Tools.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Infrastructure/CommonTools/CommonTool.class" afterPath="$PROJECT_DIR$/target/classes/test02/Infrastructure/CommonTools/CommonTool.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Infrastructure/HandlerInterceptorOwn.class" afterPath="$PROJECT_DIR$/target/classes/test02/Infrastructure/HandlerInterceptorOwn.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Infrastructure/service/CustomerService.class" afterPath="$PROJECT_DIR$/target/classes/test02/Infrastructure/service/CustomerService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Infrastructure/service/DepartmentService.class" afterPath="$PROJECT_DIR$/target/classes/test02/Infrastructure/service/DepartmentService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Infrastructure/service/RoleService.class" afterPath="$PROJECT_DIR$/target/classes/test02/Infrastructure/service/RoleService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Infrastructure/sql/CustomerMapper.class" afterPath="$PROJECT_DIR$/target/classes/test02/Infrastructure/sql/CustomerMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Infrastructure/sql/CustomerRoleMapper.class" afterPath="$PROJECT_DIR$/target/classes/test02/Infrastructure/sql/CustomerRoleMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Infrastructure/sql/DepartmentMapper.class" afterPath="$PROJECT_DIR$/target/classes/test02/Infrastructure/sql/DepartmentMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Infrastructure/sql/RoleMapper.class" afterPath="$PROJECT_DIR$/target/classes/test02/Infrastructure/sql/RoleMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/thrift/ThriftServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/test02/thrift/ThriftServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/thrift/clientTest.class" afterPath="$PROJECT_DIR$/target/classes/test02/thrift/clientTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm.war" afterPath="$PROJECT_DIR$/target/ssm.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Application/CustomerController.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Application/CustomerController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Application/CustomerPublicController.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Application/CustomerPublicController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Application/DepartmentController.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Application/DepartmentController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Application/RoleController.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Application/RoleController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Domain/CustomerEntity.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Domain/CustomerEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Domain/CustomerRoleEntity.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Domain/CustomerRoleEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Domain/DepartmentEntity.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Domain/DepartmentEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Domain/RoleEntity.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Domain/RoleEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Domain/customer/CustomerDomain.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Domain/customer/CustomerDomain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Domain/department/DepartmentDomain.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Domain/department/DepartmentDomain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Domain/role/RoleDomain.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Domain/role/RoleDomain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/CommonTools/APIReturn.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/CommonTools/APIReturn.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/CommonTools/CommonTool$CodeEnum.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/CommonTools/CommonTool$CodeEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/CommonTools/CommonTool$SessionTime.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/CommonTools/CommonTool$SessionTime.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/CommonTools/CommonTool$State.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/CommonTools/CommonTool$State.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/CommonTools/CommonTool$Tools.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/CommonTools/CommonTool$Tools.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/CommonTools/CommonTool.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/CommonTools/CommonTool.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/HandlerInterceptorOwn.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/HandlerInterceptorOwn.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/service/CustomerService.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/service/CustomerService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/service/DepartmentService.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/service/DepartmentService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/service/RoleService.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/service/RoleService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/sql/CustomerMapper.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/sql/CustomerMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/sql/CustomerRoleMapper.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/sql/CustomerRoleMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/sql/DepartmentMapper.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/sql/DepartmentMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/sql/RoleMapper.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/sql/RoleMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/thrift/ThriftServiceImpl.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/thrift/ThriftServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/thrift/clientTest.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/thrift/clientTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Maven Proj.iml" afterPath="$PROJECT_DIR$/Maven Proj.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/JAVA/test02/Application/CustomerPublicController.java" afterPath="$PROJECT_DIR$/src/main/JAVA/test02/Application/CustomerPublicController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/JAVA/test02/thrift/clientTest.java" afterPath="$PROJECT_DIR$/src/main/JAVA/test02/thrift/clientTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/applicationContext.xml" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/applicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/web.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/JAVA/test02/thrift/Client.java" afterPath="$PROJECT_DIR$/src/main/JAVA/test02/thrift/ClientProxy.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/JAVA/test02/thrift/Service.java" afterPath="$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftServerProxy.java" />
     </list>
     <ignored path="test02.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -143,37 +60,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Service.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/Service.java">
+      <file leaf-file-name="ThriftServerProxy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftServerProxy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ThriftApplication.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ThriftService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+            <state relative-caret-position="239">
+              <caret line="47" column="60" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="60" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#13464#13491#0" expanded="true" />
-                <element signature="e#15514#15566#0" expanded="true" />
-                <element signature="e#27616#27643#0" expanded="true" />
-                <element signature="e#29662#29714#0" expanded="true" />
+                <element signature="e#1206#2233#0" expanded="true" />
+                <element signature="e#2232#2233#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -182,60 +76,58 @@
       <file leaf-file-name="clientTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/clientTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+            <state relative-caret-position="133">
+              <caret line="7" column="5" selection-start-line="3" selection-start-column="3" selection-end-line="7" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/Client.java">
+      <file leaf-file-name="serviceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/serviceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="26" column="57" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="114">
+              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ClientProxy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/ClientProxy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TIOStreamTransport.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/thrift/libthrift/0.11.0/libthrift-0.11.0.jar!/org/apache/thrift/transport/TIOStreamTransport.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="63" column="18" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="18" />
+            <state relative-caret-position="406">
+              <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="thriftConfig.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/thriftConfig.properties">
+      <file leaf-file-name="ThriftServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="34" column="23" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DispatcherServlet.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.14.RELEASE/spring-webmvc-4.3.14.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-570">
-              <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+            <state relative-caret-position="152">
+              <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -246,8 +138,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="spring-beans.schema" />
         <option value="Interface" />
+        <option value="spring-beans.schema" />
         <option value="Class" />
       </list>
     </option>
@@ -263,13 +155,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/Mappers/MapperService/DepartmentService.java" />
-        <option value="$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/Mappers/MapperServiceImpl/DepartmentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/Mappers/CustomerMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/Mappers/DepartmentMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/sql/DepartmentMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/sql/DepartmentMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/sql/Mappers/DepartmentMapper.java" />
         <option value="$PROJECT_DIR$/src/main/JAVA/test02/Domain/RoleDomain.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spring-mybatis.xml" />
@@ -288,7 +173,6 @@
         <option value="$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/sql/CustomerRoleMapper.java" />
         <option value="$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/sql/RoleMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/Infrastructure/sql/RoleMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/JAVA/test02/Application/CustomerPublicController.java" />
         <option value="$PROJECT_DIR$/src/main/JAVA/test02/Application/CustomerController.java" />
         <option value="$PROJECT_DIR$/src/main/JAVA/test02/Domain/customer/CustomerDomain.java" />
         <option value="$PROJECT_DIR$/src/main/JAVA/test02/Application/DepartmentController.java" />
@@ -308,12 +192,20 @@
         <option value="$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftService.java" />
         <option value="$PROJECT_DIR$/src/main/JAVA/test02/thrift/Client.java" />
         <option value="$PROJECT_DIR$/src/main/JAVA/test02/thrift/clientTest.java" />
-        <option value="$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/JAVA/test02/thrift/MyThread.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/main/JAVA/test02/thrift/Service.java" />
         <option value="$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/JAVA/test02/thrift/Service.java" />
+        <option value="$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftHttpProxyFactoryBean.java" />
+        <option value="$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftServelet.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext-thrift.xml" />
+        <option value="$PROJECT_DIR$/src/main/JAVA/test02/Application/CustomerPublicController.java" />
+        <option value="$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/JAVA/test02/thrift/serviceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/JAVA/test02/thrift/ClientProxy.java" />
+        <option value="$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftServerProxy.java" />
       </list>
     </option>
   </component>
@@ -381,66 +273,12 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="test02" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maven: org.apache.thrift:libthrift:0.11.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libthrift-0.11.0.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apache" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thrift" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maven: org.apache.thrift:libthrift:0.11.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libthrift-0.11.0.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -642,6 +480,40 @@
               <option name="myItemId" value="test02" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Infrastructure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CommonTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test02" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testJavaSSM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JAVA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test02" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -675,12 +547,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="F:/gradleProj/test01" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -706,7 +580,7 @@
       <recent name="F:\Maven Proj\src\main\webapp" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.tomcat8">
+  <component name="RunManager" selected="Application.client">
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.29" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment />
@@ -1319,7 +1193,7 @@
     </configuration>
     <configuration default="false" name="server" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="test02.thrift.ThriftApplication" />
+      <option name="MAIN_CLASS_NAME" value="test02.thrift.serviceTest" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -1448,11 +1322,12 @@
       <workItem from="1524124469326" duration="750000" />
       <workItem from="1524188626880" duration="50000" />
       <workItem from="1524205930305" duration="12948000" />
+      <workItem from="1524446355751" duration="16465000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225964000" />
+    <option name="totallyTimeSpent" value="242429000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1464,7 +1339,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="1" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1476,21 +1351,21 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2852194" sideWeight="0.5110024" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290993" sideWeight="0.49755502" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2852194" sideWeight="0.48899755" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290993" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2852194" sideWeight="0.48899755" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290993" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290993" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2121027" sideWeight="0.49552572" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21149144" sideWeight="0.5044743" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290993" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21149144" sideWeight="0.5044743" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3221709" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21149144" sideWeight="0.5044743" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1556,7 +1431,7 @@
           <option name="timeStamp" value="134" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="158" />
+      <option name="time" value="174" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1565,90 +1440,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1-sources.jar!/javax/servlet/http/HttpServletRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="306" column="18" selection-start-line="306" selection-start-column="18" selection-end-line="306" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/springMVC.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/sql/RoleMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="12" column="48" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.14.RELEASE/spring-webmvc-4.3.14.RELEASE.jar!/org/springframework/web/servlet/HandlerExecutionChain.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="621" column="8" selection-start-line="621" selection-start-column="8" selection-end-line="621" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Domain/customer/CustomerDomain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="46" column="49" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.14.RELEASE/spring-web-4.3.14.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="121" column="30" selection-start-line="121" selection-start-column="30" selection-end-line="121" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Application/DepartmentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="45" column="43" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/sql/CustomerMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="24" column="88" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Domain/department/DepartmentDomain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="47" column="54" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Infrastructure/sql/CustomerMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="75" column="64" selection-start-line="75" selection-start-column="64" selection-end-line="75" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Infrastructure/sql/CustomerRoleMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/sql/CustomerRoleMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -1670,13 +1461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Application/CustomerPublicController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/CommonTools/CommonTool.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1881">
@@ -1688,13 +1472,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/CommonTools/APIReturn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1739,7 +1516,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="55" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1747,7 +1523,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1759,36 +1534,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3629">
-          <caret line="191" column="17" selection-start-line="191" selection-start-column="17" selection-end-line="191" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Application/CustomerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="63" column="114" selection-start-line="63" selection-start-column="99" selection-end-line="63" selection-end-column="114" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/service/CustomerService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="40" column="32" selection-start-line="38" selection-start-column="8" selection-end-line="40" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1797,14 +1548,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="156" column="18" selection-start-line="156" selection-start-column="18" selection-end-line="156" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/thrift.thrift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1823,7 +1566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1539">
           <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1831,14 +1573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
           <caret line="129" column="79" selection-start-line="129" selection-start-column="79" selection-end-line="129" selection-end-column="79" />
-          <folding>
-            <element signature="e#0#4574#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#1691#1692#0" expanded="true" />
-            <element signature="e#1741#1742#0" expanded="true" />
-            <element signature="e#2589#2590#0" expanded="true" />
-            <element signature="e#2635#2636#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1846,9 +1580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1856,10 +1587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="24" column="42" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="42" />
-          <folding>
-            <element signature="e#995#996#0" expanded="true" />
-            <element signature="e#1043#1044#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1867,15 +1594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
           <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1883,24 +1601,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1110">
           <caret line="23" column="31" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1293#1294#0" expanded="false" />
-            <element signature="e#1340#1341#0" expanded="false" />
-            <element signature="e#1537#1538#0" expanded="false" />
-            <element signature="e#1587#1588#0" expanded="false" />
-            <element signature="e#1783#1784#0" expanded="false" />
-            <element signature="e#1816#1817#0" expanded="false" />
-            <element signature="e#1856#1857#0" expanded="false" />
-            <element signature="e#1889#1890#0" expanded="false" />
-            <element signature="e#2827#2835#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.14.RELEASE/spring-webmvc-4.3.14.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-570">
+        <state relative-caret-position="114">
           <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
           <folding />
         </state>
@@ -1914,74 +1620,214 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/MyThread.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/thrift.thrift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="34" column="23" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="23" />
+        <state relative-caret-position="57">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/thrift/libthrift/0.11.0/libthrift-0.11.0.jar!/org/apache/thrift/server/TThreadPoolServer.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="63" column="18" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="18" />
+        <state relative-caret-position="51">
+          <caret line="205" column="73" selection-start-line="205" selection-start-column="56" selection-end-line="205" selection-end-column="73" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/clientTest.java">
+    <entry file="file://$PROJECT_DIR$/Maven Proj.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/Client.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="26" column="57" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#13464#13491#0" expanded="true" />
-            <element signature="e#15514#15566#0" expanded="true" />
-            <element signature="e#27616#27643#0" expanded="true" />
-            <element signature="e#29662#29714#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/MyThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        <state relative-caret-position="278">
+          <caret line="95" column="35" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/Service.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.14.RELEASE/spring-web-4.3.14.RELEASE.jar!/org/springframework/web/context/support/WebApplicationContextUtils.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state relative-caret-position="279">
+          <caret line="52" column="79" selection-start-line="52" selection-start-column="65" selection-end-line="52" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/springMVC.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Application/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Application/CustomerPublicController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/CommonTools/APIReturn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftApplication.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-thrift.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="25" column="7" selection-start-line="10" selection-start-column="2" selection-end-line="25" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.14.RELEASE/spring-beans-4.3.14.RELEASE.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="1203" column="0" selection-start-line="1203" selection-start-column="0" selection-end-line="1203" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/thrift/libthrift/0.11.0/libthrift-0.11.0.jar!/org/apache/thrift/transport/TIOStreamTransport.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/thrift/libthrift/0.11.0/libthrift-0.11.0.jar!/org/apache/thrift/server/TThreadedSelectorServer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="492" column="47" selection-start-line="492" selection-start-column="20" selection-end-line="492" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/thrift/libthrift/0.11.0/libthrift-0.11.0.jar!/org/apache/thrift/transport/TNonblockingServerTransport.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/serviceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/ClientProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/thrift/libthrift/0.11.0/libthrift-0.11.0.jar!/org/apache/thrift/TServiceClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/clientTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="5" selection-start-line="3" selection-start-column="3" selection-end-line="7" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftServerProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="47" column="60" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="60" />
+          <folding>
+            <element signature="e#1206#2233#0" expanded="true" />
+            <element signature="e#2232#2233#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
           <folding />
         </state>
       </provider>

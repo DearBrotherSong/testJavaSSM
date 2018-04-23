@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import test02.Domain.customer.CustomerDomain;
 import test02.Infrastructure.CommonTools.APIReturn;
+import test02.thrift.ClientProxy;
 
 import javax.servlet.http.HttpSession;
 import java.util.concurrent.ConcurrentHashMap;
@@ -49,6 +50,12 @@ public class CustomerPublicController {
         CustomerDomain customer = new CustomerDomain();
         session.invalidate();
         return new APIReturn().Success();
+    }
+    @RequestMapping(value = "/test",method = RequestMethod.GET)
+    @ResponseBody
+    public String Test(String param) throws Exception {
+        ClientProxy clientProxy = new ClientProxy();
+        return clientProxy.start(param);
     }
 }
 
