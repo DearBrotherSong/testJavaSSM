@@ -89,7 +89,7 @@ public class CommonTool{
                     String thisKey = key.nextElement().toString();
                     result.put(thisKey,properties.getProperty(thisKey));
                 }
-
+                stream.close();
                 return result;
             }catch (Exception e) {
                 return null;
