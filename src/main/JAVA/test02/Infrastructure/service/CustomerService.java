@@ -1,7 +1,6 @@
 package test02.Infrastructure.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 import test02.Data.CustomerEntity;
 import test02.Data.CustomerRoleEntity;
