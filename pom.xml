@@ -220,7 +220,15 @@
       <version>3.7</version>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-core -->
+    <dependency>
+      <groupId>org.flywaydb</groupId>
+      <artifactId>flyway-core</artifactId>
+      <version>5.0.7</version>
+    </dependency>
+
   </dependencies>
+
   <build>
     <finalName>ssm</finalName>
     <plugins>
@@ -231,6 +239,8 @@
           <source>1.6</source>
           <target>1.6</target>
         </configuration>
+
+
       </plugin>
     </plugins>
   </build>

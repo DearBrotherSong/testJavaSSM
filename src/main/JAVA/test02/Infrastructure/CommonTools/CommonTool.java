@@ -1,7 +1,13 @@
 package test02.Infrastructure.CommonTools;
 
 import org.apache.commons.codec.digest.DigestUtils;
+
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.lang.reflect.Field;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 
 //公共工具类
@@ -67,6 +73,28 @@ public class CommonTool{
 
             }catch (Exception e){}
             return result;
+        }
+
+        public static ConcurrentHashMap<String,String> GetPropertiesMap(String propertiesName)
+        {
+            ConcurrentHashMap<String,String> result = new ConcurrentHashMap<String, String>();
+            try {
+                Properties properties = new Properties();
+
+                InputStream stream = CommonTool.class.getClassLoader().getResourceAsStream(propertiesName);
+                properties.load(stream);
+                Enumeration key = properties.propertyNames();
+
+                while(key.hasMoreElements()) {
+                    String thisKey = key.nextElement().toString();
+                    result.put(thisKey,properties.getProperty(thisKey));
+                }
+
+                return result;
+            }catch (Exception e) {
+                return null;
+            }
+
         }
 
     }
