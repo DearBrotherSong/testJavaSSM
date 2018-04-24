@@ -1,17 +1,14 @@
 package test02.Infrastructure.service;
 
-import org.apache.ibatis.annotations.Update;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.sql.Timestamp;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
-import test02.Domain.CustomerEntity;
-import test02.Domain.DepartmentEntity;
+import test02.Data.CustomerEntity;
+import test02.Data.DepartmentEntity;
 import test02.Infrastructure.CommonTools.APIReturn;
 import test02.Infrastructure.CommonTools.CommonTool;
 import test02.Infrastructure.sql.CustomerMapper;
@@ -19,33 +16,23 @@ import test02.Infrastructure.sql.DepartmentMapper;
 
 @Service
 public class DepartmentService {
-    private ApplicationContext applicationContext;
+
     @Autowired
-    private DepartmentMapper departmentMapper;
+    private DepartmentMapper _departmentMapper;
     @Autowired
-    private CustomerMapper customerMapper;
+    private CustomerMapper _customerMapper;
 
-    public DepartmentMapper getDepartmentMapperDao(){
-        applicationContext = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");//加载spring配置文件
-        departmentMapper = applicationContext.getBean(DepartmentMapper.class);
-        return departmentMapper;
+    public DepartmentService(DepartmentMapper departmentMapper,CustomerMapper customerMapper){
+        this._customerMapper = customerMapper;
+        this._departmentMapper = departmentMapper;
     }
-
-    public CustomerMapper getCustomerMapperDao(){
-        applicationContext = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");//加载spring配置文件
-        customerMapper = applicationContext.getBean(CustomerMapper.class);
-        return customerMapper;
-    }
-
     /*
     初始化部门根节点
      */
     public ConcurrentHashMap InitDepartment()
     {
-        DepartmentMapper mapper = getDepartmentMapperDao();
-
         //根节点已存在
-        DepartmentEntity parentDept = mapper.getByParentId((long)0);
+        DepartmentEntity parentDept = _departmentMapper.getByParentId((long)0);
         if(parentDept != null)
             return  new APIReturn().InitDeptOrParentWrong();
 
@@ -58,16 +45,14 @@ public class DepartmentService {
         dept.setManager("");
         dept.setState(CommonTool.State.StateOn.getState());
 
-        DepartmentService service = new DepartmentService();
-        return service.AddAction(mapper,dept,null);
+        return AddAction(dept,null);
     }
 
     /*
     获取部门列表（list或tree）
      */
     public ConcurrentHashMap FindAll(boolean isTree){
-        DepartmentMapper mapper = getDepartmentMapperDao();
-        List<DepartmentEntity> allDept = mapper.findAllAsList();
+        List<DepartmentEntity> allDept = _departmentMapper.findAllAsList();
         Object result = allDept;
         if(isTree)
             result = GetDeptTree(allDept);
@@ -85,15 +70,13 @@ public class DepartmentService {
         if(name.length() > 30 || parentId <= 0 || (!CommonTool.Tools.isNullOrWhiteSpace(description) && description.length() > 200))
             return new APIReturn().CheckParamFaild();
 
-        DepartmentMapper mapper = getDepartmentMapperDao();
-
         //检测上级部门是否存在
-        DepartmentEntity parentDept = mapper.getDepartmentById(parentId);
+        DepartmentEntity parentDept = _departmentMapper.getDepartmentById(parentId);
         if(parentDept == null)
             return  new APIReturn().DeptOrParentWrong();
 
         //检测主管邮箱是否有效
-        if(!CommonTool.Tools.isNullOrWhiteSpace(managerEmail) && getCustomerMapperDao().getBasicByEmail(managerEmail) == null)
+        if(!CommonTool.Tools.isNullOrWhiteSpace(managerEmail) && _customerMapper.getBasicByEmail(managerEmail) == null)
             return new APIReturn().CheckManagerEmailFaild();
 
         //入库动作
@@ -106,8 +89,7 @@ public class DepartmentService {
         dept.setManager(managerEmail);
         dept.setState(CommonTool.State.StateOn.getState());
 
-        DepartmentService service = new DepartmentService();
-        return service.AddAction(mapper,dept,parentDept);
+        return AddAction(dept,parentDept);
     }
 
     /*
@@ -122,19 +104,18 @@ public class DepartmentService {
         if(name.length() > 30 || (!CommonTool.Tools.isNullOrWhiteSpace(description) && description.length() > 200))
             return new APIReturn().CheckParamFaild();
         //检测主管邮箱是否有效
-        if(!CommonTool.Tools.isNullOrWhiteSpace(managerEmail) && getCustomerMapperDao().getBasicByEmail(managerEmail) == null)
+        if(!CommonTool.Tools.isNullOrWhiteSpace(managerEmail) && _customerMapper.getBasicByEmail(managerEmail) == null)
             return new APIReturn().CheckManagerEmailFaild();
 
-        departmentMapper = getDepartmentMapperDao();
         //部门是否存在
-        DepartmentEntity dept = departmentMapper.getDepartmentById(id);
+        DepartmentEntity dept = _departmentMapper.getDepartmentById(id);
         if(dept == null)
             return  new APIReturn().DeptOrParentWrong();
         managerEmail = CommonTool.Tools.isNullOrWhiteSpace(managerEmail)?dept.getManager():managerEmail;
 
         //修改部门名称和子部门名称路径
-        List<DepartmentEntity> allChilds = departmentMapper.getDepartmentByIdPath(CommonTool.Tools.stringConcat("/",dept.getId().toString(),"/"));
-        departmentMapper.updateDepartment(id,name,managerEmail,description);
+        List<DepartmentEntity> allChilds = _departmentMapper.getDepartmentByIdPath(CommonTool.Tools.stringConcat("/",dept.getId().toString(),"/"));
+        _departmentMapper.updateDepartment(id,name,managerEmail,description);
         int aaa=99999;
         if(!dept.getName().equals(name))
         {
@@ -145,7 +126,7 @@ public class DepartmentService {
             }
             String oldName = CommonTool.Tools.stringConcat("/",dept.getName(),"/");
             String newName = CommonTool.Tools.stringConcat("/",name,"/");
-            int update = departmentMapper.updateChildNamePath(oldName,newName,childIds);
+            int update = _departmentMapper.updateChildNamePath(oldName,newName,childIds);
             aaa = update;
         }
 
@@ -161,9 +142,8 @@ public class DepartmentService {
         if(id<=0)
             return new APIReturn().CheckParamFaild();
 
-        departmentMapper = getDepartmentMapperDao();
         //部门是否存在
-        List<DepartmentEntity> deptList = departmentMapper.getDepartmentByIdPath(CommonTool.Tools.stringConcat("/",id.toString(),"/"));
+        List<DepartmentEntity> deptList = _departmentMapper.getDepartmentByIdPath(CommonTool.Tools.stringConcat("/",id.toString(),"/"));
         if(deptList.size() <= 0)
             return  new APIReturn().DeptOrParentWrong();
 
@@ -174,12 +154,12 @@ public class DepartmentService {
         }
 
         //部门和下级部门是否有成员
-        List<CustomerEntity> deptCustomerList = getCustomerMapperDao().getByDepartmentIds(ids);
+        List<CustomerEntity> deptCustomerList = _customerMapper.getByDepartmentIds(ids);
         if(deptCustomerList.size() > 0)
             return  new APIReturn().DepartmentHasCustomer();
 
         //删除部门和下级部门
-        departmentMapper.deleteDepartment(ids);
+        _departmentMapper.deleteDepartment(ids);
         return new APIReturn().Success();
     }
 
@@ -187,16 +167,16 @@ public class DepartmentService {
     添加部门事务
      */
     @Transactional(rollbackFor={Exception.class})
-    public ConcurrentHashMap AddAction(DepartmentMapper departmentMapper, DepartmentEntity dept, DepartmentEntity parentDept)
+    public ConcurrentHashMap AddAction( DepartmentEntity dept, DepartmentEntity parentDept)
     {
-        departmentMapper.addDepartment(dept);
+        _departmentMapper.addDepartment(dept);
         String pathCode = "/";
         String idPath= CommonTool.Tools.stringConcat(parentDept == null?pathCode:parentDept.getIdPath(),dept.getId().toString(),pathCode);
         String namePath=CommonTool.Tools.stringConcat(parentDept == null?pathCode:parentDept.getnamePath(),dept.getName(),pathCode);
 
         dept.setIdPath(idPath);
         dept.setnamePath(namePath);
-        departmentMapper.updateDepartmentPath(dept);
+        _departmentMapper.updateDepartmentPath(dept);
         return new APIReturn().Success();
     }
 

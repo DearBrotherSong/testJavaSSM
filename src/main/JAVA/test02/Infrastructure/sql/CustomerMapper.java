@@ -2,12 +2,11 @@ package test02.Infrastructure.sql;
 
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
-import test02.Domain.CustomerEntity;
+import test02.Data.CustomerEntity;
 
 import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.List;
-import java.util.concurrent.ConcurrentHashMap;
 
 @Repository
 public interface CustomerMapper {

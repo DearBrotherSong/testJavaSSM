@@ -1,17 +1,12 @@
 package test02.Infrastructure.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.parsing.ParseState;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import test02.Domain.RoleEntity;
+import test02.Data.RoleEntity;
 import test02.Infrastructure.CommonTools.APIReturn;
 import test02.Infrastructure.CommonTools.CommonTool;
-import test02.Infrastructure.sql.CustomerMapper;
 import test02.Infrastructure.sql.CustomerRoleMapper;
-import test02.Infrastructure.sql.DepartmentMapper;
 import test02.Infrastructure.sql.RoleMapper;
 
 import java.sql.Timestamp;
@@ -20,22 +15,16 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Service
 public class RoleService {
-    private ApplicationContext applicationContext;
     @Autowired
-    private RoleMapper roleMapper;
+    private RoleMapper _roleMapper;
     @Autowired
-    private CustomerRoleMapper customerRoleMapper;
+    private CustomerRoleMapper _customerRoleMapper;
 
-    public CustomerRoleMapper getCustomerRoleMapperDao(){
-        applicationContext = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");//加载spring配置文件
-        customerRoleMapper = applicationContext.getBean(CustomerRoleMapper.class);
-        return customerRoleMapper;
+    public RoleService(CustomerRoleMapper customerRoleMapper,RoleMapper roleMapper) {
+        this._customerRoleMapper = customerRoleMapper;
+        this._roleMapper = roleMapper;
     }
-    public RoleMapper getRoleMapperDao(){
-        applicationContext = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");//加载spring配置文件
-        roleMapper = applicationContext.getBean(RoleMapper.class);
-        return roleMapper;
-    }
+
     /*
     添加角色
      */
@@ -44,8 +33,7 @@ public class RoleService {
                 (!CommonTool.Tools.isNullOrWhiteSpace(name) && description.length() >200))
             return new APIReturn().CheckParamFaild();
 
-        roleMapper = getRoleMapperDao();
-        if(roleMapper.getByName(name,(long)0) != null)
+        if(_roleMapper.getByName(name,(long)0) != null)
             return new APIReturn().RoleNameCheckFail();
 
         RoleEntity role = new RoleEntity();
@@ -56,7 +44,7 @@ public class RoleService {
         role.setState(CommonTool.State.StateOn.getState());
 
         try {
-            roleMapper.addRole(role);
+            _roleMapper.addRole(role);
         }catch (Exception e){
             return new APIReturn().UnknownExceptionProduce();
         }
@@ -72,17 +60,16 @@ public class RoleService {
                 (!CommonTool.Tools.isNullOrWhiteSpace(name) && description.length() >200))
             return new APIReturn().CheckParamFaild();
 
-        roleMapper = getRoleMapperDao();
-        RoleEntity currentRole = roleMapper.getById(id);
+        RoleEntity currentRole = _roleMapper.getById(id);
         if(currentRole == null)
             return new APIReturn().RoleIdCheckFail();
-        if(roleMapper.getByName(name,id) != null)
+        if(_roleMapper.getByName(name,id) != null)
             return new APIReturn().RoleNameCheckFail();
 
         try {
             currentRole.setName(name);
             currentRole.setDescription(description);
-            roleMapper.updateById(currentRole);
+            _roleMapper.updateById(currentRole);
         }catch (Exception e){
             return new APIReturn().UnknownExceptionProduce();
         }
@@ -96,15 +83,13 @@ public class RoleService {
     @Transactional
     public ConcurrentHashMap DeleteRole(Long id)
     {
-        roleMapper = getRoleMapperDao();
-        customerRoleMapper = getCustomerRoleMapperDao();
-        RoleEntity currentRole = roleMapper.getById(id);
+        RoleEntity currentRole = _roleMapper.getById(id);
         if(currentRole == null)
             return new APIReturn().RoleIdCheckFail();
 
         try {
-            customerRoleMapper.deleteByRoleId(id);
-            roleMapper.deleteById(id);
+            _customerRoleMapper.deleteByRoleId(id);
+            _roleMapper.deleteById(id);
         }catch (Exception e){
             return new APIReturn().UnknownExceptionProduce();
         }
@@ -116,9 +101,7 @@ public class RoleService {
      */
     public ConcurrentHashMap RoleList()
     {
-        roleMapper = getRoleMapperDao();
-
-        List<RoleEntity> roleList = roleMapper.findAll();
+        List<RoleEntity> roleList = _roleMapper.findAll();
         return new APIReturn().apiReturn(CommonTool.CodeEnum.Success.getCode(),"",roleList);
     }
     /*
@@ -126,8 +109,7 @@ public class RoleService {
      */
     public ConcurrentHashMap RoleInfo(Long id)
     {
-        roleMapper = getRoleMapperDao();
-        RoleEntity roleInfo = roleMapper.getById(id);
+        RoleEntity roleInfo = _roleMapper.getById(id);
         if(roleInfo == null)
             return new APIReturn().RoleIdCheckFail();
         return new APIReturn().apiReturn(CommonTool.CodeEnum.Success.getCode(),"",roleInfo);

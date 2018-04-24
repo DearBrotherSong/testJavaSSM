@@ -2,7 +2,7 @@ package test02.Infrastructure.sql;
 
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
-import test02.Domain.DepartmentEntity;
+import test02.Data.DepartmentEntity;
 
 import java.util.List;
 

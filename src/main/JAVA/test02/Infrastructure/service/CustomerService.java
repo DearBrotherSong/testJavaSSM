@@ -2,12 +2,9 @@ package test02.Infrastructure.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Service;
-import org.springframework.ui.ModelMap;
-import test02.Domain.CustomerEntity;
-import test02.Domain.CustomerRoleEntity;
-import test02.Domain.DepartmentEntity;
+import test02.Data.CustomerEntity;
+import test02.Data.CustomerRoleEntity;
 import test02.Infrastructure.CommonTools.APIReturn;
 import test02.Infrastructure.CommonTools.CommonTool;
 import test02.Infrastructure.sql.CustomerMapper;
@@ -17,7 +14,6 @@ import test02.Infrastructure.sql.RoleMapper;
 
 import javax.servlet.http.HttpSession;
 import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
@@ -25,36 +21,22 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Service
 public class CustomerService {
-    private ApplicationContext applicationContext;
     @Autowired
-    private DepartmentMapper departmentMapper;
+    private DepartmentMapper _departmentMapper;
     @Autowired
-    private CustomerMapper customerMapper;
+    private CustomerMapper _customerMapper;
     @Autowired
-    private RoleMapper roleMapper;
+    private RoleMapper _roleMapper;
     @Autowired
-    private CustomerRoleMapper customerRoleMapper;
+    private CustomerRoleMapper _customerRoleMapper;
 
-    public DepartmentMapper getDepartmentMapperDao(){
-        applicationContext = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");//加载spring配置文件
-        departmentMapper = applicationContext.getBean(DepartmentMapper.class);
-        return departmentMapper;
+    public CustomerService(DepartmentMapper departmentMapper,CustomerRoleMapper customerRoleMapper,CustomerMapper customerMapper,RoleMapper roleMapper){
+        this._departmentMapper = departmentMapper;
+        this._customerMapper = customerMapper;
+        this._customerRoleMapper = customerRoleMapper;
+        this._roleMapper = roleMapper;
     }
-    public CustomerMapper getCustomerMapperDao(){
-        applicationContext = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");//加载spring配置文件
-        customerMapper = applicationContext.getBean(CustomerMapper.class);
-        return customerMapper;
-    }
-    public RoleMapper getRoleMapper(){
-        applicationContext = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");//加载spring配置文件
-        roleMapper = applicationContext.getBean(RoleMapper.class);
-        return roleMapper;
-    }
-    public CustomerRoleMapper getCustomerRoleMapperDao(){
-        applicationContext = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");//加载spring配置文件
-        customerRoleMapper = applicationContext.getBean(CustomerRoleMapper.class);
-        return customerRoleMapper;
-    }
+
 
     /*
     注册
@@ -87,15 +69,15 @@ public class CustomerService {
         if(customer.getDepartment_id()<1)
             customer.setDepartment_id(1);
         //人员所属部门是否存在(0:不属于任何部门)
-        if(getDepartmentMapperDao().getDepartmentById(customer.getDepartment_id())==null)
+        if(_departmentMapper.getDepartmentById(customer.getDepartment_id())==null)
             return  new APIReturn().DeptOrParentWrong();
         //邮箱、用户名、昵称是否已经注册
-        if(customerMapper.getBasicByEmailOrName(customer.getEmail(),customer.getUserName(),customer.getNickName(),(long)0)!=null)
+        if(_customerMapper.getBasicByEmailOrName(customer.getEmail(),customer.getUserName(),customer.getNickName(),(long)0)!=null)
             return new APIReturn().CheckEmailFaild();
 
         customer.setPassword(CommonTool.Tools.GetMD5(customer.getPassword()));
         //数据入库
-        customerMapper.register(customer);
+        _customerMapper.register(customer);
         return new APIReturn().Success();
     }
 
@@ -106,18 +88,17 @@ public class CustomerService {
         if(CommonTool.Tools.isNullOrWhiteSpace(username) || CommonTool.Tools.isNullOrWhiteSpace(password))
             return new APIReturn().CheckParamFaild();
 
-        customerMapper = getCustomerMapperDao();
-        CustomerEntity loginUser = customerMapper.getByUserName(username);
+        CustomerEntity loginUser = _customerMapper.getByUserName(username);
         if(loginUser!=null && CommonTool.Tools.GetMD5(password).equals(loginUser.getPassword()))
         {
-            int result = customerMapper.updateLastLoginTime(new Timestamp(System.currentTimeMillis()),loginUser.getId());
+            int result = _customerMapper.updateLastLoginTime(new Timestamp(System.currentTimeMillis()),loginUser.getId());
             if(result != 1)
                 return new APIReturn().TokenWrong();
             loginUser.setPassword("");
             String token = UUID.randomUUID().toString();
             session.setAttribute("currentUser",loginUser);
             session.setAttribute(token,loginUser);
-            List<String> roleNameList = getRoleMapper().getRoleNamesByCustomerId(loginUser.getId());
+            List<String> roleNameList = _roleMapper.getRoleNamesByCustomerId(loginUser.getId());
             session.setAttribute(token.concat("_roleList"),roleNameList);
             ConcurrentHashMap resultData = CommonTool.Tools.entityToMap(loginUser);
             resultData.put("token",token);
@@ -141,8 +122,7 @@ public class CustomerService {
         if(id == null || id < 0)
             return new APIReturn().CheckParamFaild();
 
-        customerMapper = getCustomerMapperDao();
-        HashMap customer = customerMapper.getUserMessDetailById(id);
+        HashMap customer = _customerMapper.getUserMessDetailById(id);
         if(customer==null)
             return new APIReturn().GetCustomerField();
         return new APIReturn().apiReturn(CommonTool.CodeEnum.Success.getCode(),"",customer);
@@ -158,9 +138,8 @@ public class CustomerService {
         userName = CommonTool.Tools.isNullOrWhiteSpace(userName) ? "" : userName;
         String idPath = department_id==null ||department_id <= 1 ? "" : CommonTool.Tools.stringConcat("/",department_id.toString(),"/");
 
-        customerMapper = getCustomerMapperDao();
-        List<HashMap> customerList = customerMapper.list(userName,idPath,(pageInt-1)*sizeInt,sizeInt);
-        int total=customerMapper.getListTotal(userName,idPath,(pageInt-1)*sizeInt,sizeInt);
+        List<HashMap> customerList = _customerMapper.list(userName,idPath,(pageInt-1)*sizeInt,sizeInt);
+        int total=_customerMapper.getListTotal(userName,idPath,(pageInt-1)*sizeInt,sizeInt);
         ConcurrentHashMap result = new ConcurrentHashMap();
         result.put("total",total);
         result.put("data",customerList);
@@ -170,8 +149,6 @@ public class CustomerService {
     修改用户基本信息（昵称、部门、邮箱）
      */
     public ConcurrentHashMap UpdateCustomer(Long CustomerId,String nickName,String email,Long department_id,boolean isCurrent,HttpSession session){
-        customerMapper = getCustomerMapperDao();
-
         //邮箱格式验证
         if(!CommonTool.Tools.CheckEmailFormat(email))
             return new APIReturn().EmailFormatWrong();
@@ -186,11 +163,11 @@ public class CustomerService {
             CustomerId = updateUser.getId();
         }
         else {
-            updateUser = customerMapper.getById(CustomerId);
+            updateUser = _customerMapper.getById(CustomerId);
             department_id = department_id <1?1:department_id;
             departmentId = department_id;
             //人员所属部门是否存在(0:不属于任何部门)
-            if(getDepartmentMapperDao().getDepartmentById(department_id)==null)
+            if(_departmentMapper.getDepartmentById(department_id)==null)
                 return  new APIReturn().DeptOrParentWrong();
         }
 
@@ -198,10 +175,10 @@ public class CustomerService {
             return new APIReturn().GetCustomerField();
 
         //邮箱、用户名、昵称是否已经注册
-        if(customerMapper.getBasicByEmailOrName(updateUser.getUserName(),email,nickName,CustomerId)!=null)
+        if(_customerMapper.getBasicByEmailOrName(updateUser.getUserName(),email,nickName,CustomerId)!=null)
             return new APIReturn().CheckEmailFaild();
 
-        int result = customerMapper.updateCustomerBasic(departmentId,email,nickName,CustomerId);
+        int result = _customerMapper.updateCustomerBasic(departmentId,email,nickName,CustomerId);
         if(result != 1)
             return new APIReturn().TargetLost();
         return new APIReturn().Success();
@@ -213,12 +190,11 @@ public class CustomerService {
         if(newPassword == null || newPassword.length()<6||newPassword.length()>20||!newPassword.equals(confirmPassword))
             return new APIReturn().PasswordResetCheckFaild();
 
-        customerMapper = getCustomerMapperDao();
-        CustomerEntity currentUser = customerMapper.getById(id);
+        CustomerEntity currentUser = _customerMapper.getById(id);
         if(currentUser == null)
             return new APIReturn().LoginLost();
 
-        int result = customerMapper.updatePassword(currentUser.getId(), CommonTool.Tools.GetMD5(newPassword));
+        int result = _customerMapper.updatePassword(currentUser.getId(), CommonTool.Tools.GetMD5(newPassword));
         if(result != 1)
             return  new APIReturn().PasswordResetFaild();
 
@@ -231,12 +207,11 @@ public class CustomerService {
         if(id==null)
             return new APIReturn().CheckParamFaild();
 
-        customerMapper = getCustomerMapperDao();
-        if(customerMapper.getById(id) == null)
+        if(_customerMapper.getById(id) == null)
             return new APIReturn().GetCustomerField();
 
-        getCustomerRoleMapperDao().deleteByCustomerId(id);
-        customerMapper.deleteCustomer(id);
+        _customerRoleMapper.deleteByCustomerId(id);
+        _customerMapper.deleteCustomer(id);
 
         return new APIReturn().Success();
     }
@@ -244,24 +219,22 @@ public class CustomerService {
     给人员赋予角色属性
      */
     public ConcurrentHashMap AddCustomerRole(Long customerId,Long roleId){
-        customerMapper = getCustomerMapperDao();
         if(customerId == null || roleId == null)
             return new APIReturn().CheckParamFaild();
-        if(customerId<0||getCustomerMapperDao().getById(customerId)==null)
+        if(customerId<0||_customerMapper.getById(customerId)==null)
             return new APIReturn().GetCustomerField();
-        if(roleId<0||getRoleMapper().getById(roleId) == null)
+        if(roleId<0||_roleMapper.getById(roleId) == null)
             return new APIReturn().RoleIdCheckFail();
 
         CustomerRoleEntity customerRoleEntity = new CustomerRoleEntity();
         customerRoleEntity.setCustomerId(customerId);
         customerRoleEntity.setRoleId(roleId);
 
-        customerRoleMapper = getCustomerRoleMapperDao();
-        if(customerRoleMapper.getByCustomerIdAndRoleId(customerRoleEntity) != null)
+        if(_customerRoleMapper.getByCustomerIdAndRoleId(customerRoleEntity) != null)
             return new APIReturn().CustomerOwnedRole();
 
         try {
-            customerRoleMapper.insert(customerRoleEntity);
+            _customerRoleMapper.insert(customerRoleEntity);
             return new APIReturn().Success();
         }catch (Exception e){
             return new APIReturn().UnknownExceptionProduce();

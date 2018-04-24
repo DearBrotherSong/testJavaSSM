@@ -2,9 +2,7 @@ package test02.Infrastructure.sql;
 
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
-import test02.Domain.CustomerRoleEntity;
-
-import java.util.List;
+import test02.Data.CustomerRoleEntity;
 
 @Repository
 public interface CustomerRoleMapper {

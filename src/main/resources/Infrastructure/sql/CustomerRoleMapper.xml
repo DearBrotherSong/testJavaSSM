@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="test02.Infrastructure.sql.CustomerRoleMapper" >
-    <resultMap id="BaseResultMap" type="test02.Domain.CustomerRoleEntity" >
+    <resultMap id="BaseResultMap" type="test02.Data.CustomerRoleEntity" >
         <id column="customerId" property="customerId" jdbcType="BIGINT" />
         <id column="roleId" property="roleId" jdbcType="BIGINT" />
     </resultMap>
-    <select id="getByCustomerIdAndRoleId" parameterType="test02.Domain.CustomerRoleEntity" resultMap="BaseResultMap">
+    <select id="getByCustomerIdAndRoleId" parameterType="test02.Data.CustomerRoleEntity" resultMap="BaseResultMap">
         SELECT customerId,roleId
         FROM customer_role
         WHERE customerId = #{customerId}
         AND roleId = #{roleId}
     </select>
-    <insert id="insert" parameterType="test02.Domain.CustomerRoleEntity" >
+    <insert id="insert" parameterType="test02.Data.CustomerRoleEntity" >
         INSERT INTO
         customer_role (customerId, roleId)
         VALUES (#{customerId}, #{roleId})
     </insert>
-    <delete id="deleteByCustomerIdAndRoleId" parameterType="test02.Domain.CustomerRoleEntity">
+    <delete id="deleteByCustomerIdAndRoleId" parameterType="test02.Data.CustomerRoleEntity">
         DELETE FROM customer_role
         WHERE customerId = #{customerId}
         AND roleId = #{roleId}

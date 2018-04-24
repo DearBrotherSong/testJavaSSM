@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="test02.Infrastructure.sql.DepartmentMapper">
-    <resultMap id="BaseResultMap" type="test02.Domain.DepartmentEntity" >
+    <resultMap id="BaseResultMap" type="test02.Data.DepartmentEntity" >
         <id column="id" property="id" jdbcType="BIGINT" />
         <result column="name" property="name" jdbcType="VARCHAR" />
         <result column="parentId" property="parentId" jdbcType="BIGINT" />
@@ -41,7 +41,7 @@
         AND idPath LIKE "%"#{idPath}"%";
     </select>
 
-    <insert id="addDepartment" keyColumn="id" parameterType="test02.Domain.DepartmentEntity" useGeneratedKeys="true" keyProperty="id">
+    <insert id="addDepartment" keyColumn="id" parameterType="test02.Data.DepartmentEntity" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO
         department(name,parentId,createTime,description,manager,state)
         VALUES(#{name},#{parentId},#{createTime},#{description},#{manager},#{state});
@@ -65,7 +65,7 @@
         </foreach>;
     </update>
 
-    <update id="updateDepartmentPath" parameterType="test02.Domain.DepartmentEntity" >
+    <update id="updateDepartmentPath" parameterType="test02.Data.DepartmentEntity" >
         UPDATE department
         SET
         idPath=#{idPath},namePath=#{namePath}
