@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import test02.Consul.Consul;
+import test02.Consul.ConsulProxy;
 import test02.Infrastructure.CommonTools.APIReturn;
 import test02.Infrastructure.service.CustomerService;
 import test02.thrift.ClientProxy;
@@ -55,11 +57,6 @@ public class CustomerPublicController {
         session.invalidate();
         return new APIReturn().Success();
     }
-    @RequestMapping(value = "/test",method = RequestMethod.GET)
-    @ResponseBody
-    public String Test(String param) throws Exception {
-        ClientProxy clientProxy = new ClientProxy();
-        return clientProxy.start(param);
-    }
+
 }
 

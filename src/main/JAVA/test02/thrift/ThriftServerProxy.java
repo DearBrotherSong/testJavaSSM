@@ -14,6 +14,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.ServletSecurity;
 import javax.servlet.annotation.WebServlet;
@@ -32,6 +33,7 @@ public class ThriftServerProxy{
     private static TServer _SERVER = null;
     private static int SERVER_PORT = 8100;
 
+    @PostConstruct
     public void start() throws  Exception{
         Thread serverThread = new Thread(){
             public void run(){

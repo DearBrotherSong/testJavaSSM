@@ -1,12 +1,11 @@
 package test02.Infrastructure.CommonTools;
 
+import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.digest.DigestUtils;
 
-import java.io.FileInputStream;
 import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.util.Enumeration;
-import java.util.HashMap;
 import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -75,6 +74,9 @@ public class CommonTool{
             return result;
         }
 
+        /*
+        读取properties文件
+         */
         public static ConcurrentHashMap<String,String> GetPropertiesMap(String propertiesName)
         {
             ConcurrentHashMap<String,String> result = new ConcurrentHashMap<String, String>();
@@ -95,6 +97,10 @@ public class CommonTool{
                 return null;
             }
 
+        }
+        public static String DecodeBase64(String param){
+            byte[] bytes = Base64.decodeBase64(param);
+            return new String(bytes);
         }
 
     }
