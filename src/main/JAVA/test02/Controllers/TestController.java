@@ -25,13 +25,13 @@ public class TestController {
 
         //ConsulTest
         long startTime1=System.currentTimeMillis();
-        ConsulProxy._consul.getKVValue("KVTest");
+        String KVValue = ConsulProxy._consul.getKVValue("KVTest");
         long startTime2=System.currentTimeMillis();
 
         ConsulProxy._consul.getKVValuesByPreFix("KV");
         long endTime=System.currentTimeMillis();
 
-        result = "time1 ->"+(startTime2-startTime1)+" ms    time2 ->"+(endTime-startTime2)+" ms";
+        result = KVValue + "   time1 ->"+(startTime2-startTime1)+" ms    time2 ->"+(endTime-startTime2)+" ms";
 
 
         return result;

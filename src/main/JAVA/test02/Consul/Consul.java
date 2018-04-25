@@ -63,7 +63,7 @@ public class Consul {
         List<GetValue> list = _consulClient.getKVValues(keyPrefix).getValue();
         return list;
     }
-    public Object getKVValue(String key){
+    public String getKVValue(String key){
         GetValue value = _consulClient.getKVValue(key).getValue();
         String trueValue = value.getValue();
         String result = CommonTool.Tools.DecodeBase64(trueValue);

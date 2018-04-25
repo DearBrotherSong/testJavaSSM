@@ -2,40 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2795b5c5-a3cc-42b3-b2e2-420fdd56fc53" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_ecwid_consul_consul_api_1_1_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/JAVA/test02/Consul/Consul.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/JAVA/test02/Consul/ConsulProxy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/JAVA/test02/Consul/ConsulTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/JAVA/test02/Controllers/TestController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/consul.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Controllers/CustomerPublicController.class" afterPath="$PROJECT_DIR$/target/classes/test02/Controllers/CustomerPublicController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Infrastructure/CommonTools/CommonTool$CodeEnum.class" afterPath="$PROJECT_DIR$/target/classes/test02/Infrastructure/CommonTools/CommonTool$CodeEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Infrastructure/CommonTools/CommonTool$SessionTime.class" afterPath="$PROJECT_DIR$/target/classes/test02/Infrastructure/CommonTools/CommonTool$SessionTime.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Infrastructure/CommonTools/CommonTool$State.class" afterPath="$PROJECT_DIR$/target/classes/test02/Infrastructure/CommonTools/CommonTool$State.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Infrastructure/CommonTools/CommonTool$Tools.class" afterPath="$PROJECT_DIR$/target/classes/test02/Infrastructure/CommonTools/CommonTool$Tools.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/Infrastructure/CommonTools/CommonTool.class" afterPath="$PROJECT_DIR$/target/classes/test02/Infrastructure/CommonTools/CommonTool.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/thrift/ThriftServerProxy$1.class" afterPath="$PROJECT_DIR$/target/classes/test02/thrift/ThriftServerProxy$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test02/thrift/ThriftServerProxy.class" afterPath="$PROJECT_DIR$/target/classes/test02/thrift/ThriftServerProxy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm.war" afterPath="$PROJECT_DIR$/target/ssm.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Controllers/CustomerPublicController.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Controllers/CustomerPublicController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/CommonTools/CommonTool$CodeEnum.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/CommonTools/CommonTool$CodeEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/CommonTools/CommonTool$SessionTime.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/CommonTools/CommonTool$SessionTime.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/CommonTools/CommonTool$State.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/CommonTools/CommonTool$State.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/CommonTools/CommonTool$Tools.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/CommonTools/CommonTool$Tools.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/CommonTools/CommonTool.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/Infrastructure/CommonTools/CommonTool.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/thrift/ThriftServerProxy$1.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/thrift/ThriftServerProxy$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/thrift/ThriftServerProxy.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/test02/thrift/ThriftServerProxy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Maven_Proj_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Maven_Proj_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Maven Proj.iml" afterPath="$PROJECT_DIR$/Maven Proj.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/JAVA/test02/Controllers/CustomerPublicController.java" afterPath="$PROJECT_DIR$/src/main/JAVA/test02/Controllers/CustomerPublicController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/CommonTools/CommonTool.java" afterPath="$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/CommonTools/CommonTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftServerProxy.java" afterPath="$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftServerProxy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/applicationContext.xml" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/applicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/JAVA/test02/Consul/Consul.java" afterPath="$PROJECT_DIR$/src/main/JAVA/test02/Consul/Consul.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/JAVA/test02/Controllers/TestController.java" afterPath="$PROJECT_DIR$/src/main/JAVA/test02/Controllers/TestController.java" />
     </list>
     <ignored path="test02.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,8 +47,8 @@
       <file leaf-file-name="CustomerController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Controllers/CustomerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="33" />
+            <state relative-caret-position="95">
+              <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -89,8 +57,8 @@
       <file leaf-file-name="Consul.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Consul/Consul.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+            <state relative-caret-position="144">
+              <caret line="57" column="75" selection-start-line="57" selection-start-column="75" selection-end-line="57" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConsulProxy.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ConsulProxy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Consul/ConsulProxy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+            <state relative-caret-position="171">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -142,16 +110,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ThriftServerProxy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftServerProxy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CustomerPublicController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Controllers/CustomerPublicController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -162,14 +120,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TestController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Controllers/TestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
+            <state relative-caret-position="125">
               <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/service/CustomerService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-133">
+              <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -238,7 +206,6 @@
         <option value="$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/Consul/ConsoleTest.java" />
         <option value="$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/Consul/Consul.java" />
         <option value="$PROJECT_DIR$/src/main/JAVA/test02/Consul/ConsulePoxy.java" />
-        <option value="$PROJECT_DIR$/src/main/JAVA/test02/Consul/Consul.java" />
         <option value="$PROJECT_DIR$/src/main/JAVA/test02/Consul/ConsoleTest.java" />
         <option value="$PROJECT_DIR$/src/main/JAVA/test02/thrift/ThriftServerProxy.java" />
         <option value="$PROJECT_DIR$/src/main/JAVA/test02/Consul/ConsulPoxy.java" />
@@ -246,6 +213,7 @@
         <option value="$PROJECT_DIR$/src/main/JAVA/test02/Consul/ConsulProxy.java" />
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/main/JAVA/test02/Controllers/CustomerPublicController.java" />
+        <option value="$PROJECT_DIR$/src/main/JAVA/test02/Consul/Consul.java" />
         <option value="$PROJECT_DIR$/src/main/JAVA/test02/Controllers/TestController.java" />
       </list>
     </option>
@@ -283,8 +251,8 @@
     <option name="skipTests" value="true" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="107" />
-    <option name="y" value="35" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1696" />
     <option name="height" value="1026" />
   </component>
@@ -1561,12 +1529,12 @@
       <workItem from="1524446355751" duration="18584000" />
       <workItem from="1524536241481" duration="15527000" />
       <workItem from="1524563391365" duration="743000" />
-      <workItem from="1524619559313" duration="14624000" />
+      <workItem from="1524619559313" duration="18265000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="275442000" />
+    <option name="totallyTimeSpent" value="279083000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1578,7 +1546,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="107" y="35" width="1696" height="1026" extended-state="0" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1750,16 +1718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/service/CustomerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -1779,6 +1737,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="55" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1786,6 +1745,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2022,30 +1982,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/CommonTools/CommonTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="99" column="9" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
           <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
           <folding>
             <element signature="e#1677#1693#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Consul/Consul.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2066,11 +2008,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Controllers/CustomerController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/service/CustomerService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="33" />
+        <state relative-caret-position="-133">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Consul/ConsulProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2082,20 +2034,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Controllers/TestController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Infrastructure/CommonTools/CommonTool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="342">
+          <caret line="99" column="9" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Controllers/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Consul/Consul.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="57" column="75" selection-start-line="57" selection-start-column="75" selection-end-line="57" selection-end-column="75" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Consul/ConsulProxy.java">
+    <entry file="file://$PROJECT_DIR$/src/main/JAVA/test02/Controllers/TestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        <state relative-caret-position="125">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
