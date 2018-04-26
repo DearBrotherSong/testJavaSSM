@@ -40,7 +40,7 @@
         <property name="suffix" value=".html" />
     </bean>
     <!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
-    <context:component-scan base-package="test02.Controllers"/>
+    <context:component-scan base-package="test.controllers"/>
     <!-- 扩充了注解驱动，可以将请求参数绑定到控制器参数 -->
     <mvc:default-servlet-handler/>
 
@@ -69,7 +69,7 @@
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/private/**"/>
-            <bean class="test02.Infrastructure.HandlerInterceptorOwn"></bean>
+            <bean class="test.infrastructure.HandlerInterceptorOwn"></bean>
         </mvc:interceptor>
     </mvc:interceptors>
 

@@ -3,9 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="test02.Infrastructure.sql.CustomerMapper">
+<mapper namespace="test.infrastructure.sql.CustomerMapper">
 
-    <resultMap id="BaseResultMap" type="test02.Data.CustomerEntity" >
+    <resultMap id="BaseResultMap" type="test.data.CustomerEntity" >
         <id column="id" property="id" jdbcType="BIGINT" />
         <result column="userName" property="userName" jdbcType="VARCHAR" />
         <result column="nickName" property="nickName" jdbcType="VARCHAR" />
@@ -90,7 +90,7 @@
         AND IF(LENGTH(#{userName})>0,customer.userName LIKE "%"#{userName}"%",1)
     </select>
 
-    <insert id="register" keyColumn="id" parameterType="test02.Data.DepartmentEntity" useGeneratedKeys="true" keyProperty="id">
+    <insert id="register" keyColumn="id" parameterType="test.data.DepartmentEntity" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO
         customer(userName,nickName,email,creation_time,department_id,password,state)
         VALUES(#{userName},#{nickName},#{email},#{creation_time},#{department_id},#{password},#{state});

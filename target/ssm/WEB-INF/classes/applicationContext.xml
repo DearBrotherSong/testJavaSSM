@@ -9,9 +9,9 @@
                         http://www.springframework.org/schema/context/spring-context-3.1.xsd
                         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-    <context:component-scan base-package="test02.Consul"/>
-    <context:component-scan base-package="test02.Infrastructure.sql"/>
-    <context:component-scan base-package="test02.Infrastructure.service"/>
+    <context:component-scan base-package="test.consul"/>
+    <context:component-scan base-package="test.infrastructure.sql"/>
+    <context:component-scan base-package="test.infrastructure.service"/>
     <context:annotation-config/>
     <!-- 1.1 关联jdbc.properties -->
     <context:property-placeholder location="classpath:jdbc.properties"/>
@@ -33,20 +33,20 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <!-- 数据源 -->
         <property name="dataSource" ref="dataSource"/>
-        <property name="typeAliasesPackage" value="test02.Data" />
-        <property name="mapperLocations" value="classpath:/Infrastructure/sql/*Mapper.xml"/>
+        <property name="typeAliasesPackage" value="test.data" />
+        <property name="mapperLocations" value="classpath:/infrastructure/sql/*Mapper.xml"/>
 
     </bean>
 
     <!-- 在spring容器中配置mapper的扫描器产生的动态代理对象在spring的容器中自动注册，bean的id就是mapper类名（首字母小写）-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!-- 指定扫描包的路径，就是mapper接口的路径，多个包中间以 半角逗号隔开   -->
-        <property name="basePackage" value="test02.Infrastructure.sql"/>
+        <property name="basePackage" value="test.infrastructure.sql"/>
         <!-- 配置sqlSessionFactoryBeanName -->
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
-    <bean id="thriftServerProxy" class="test02.thrift.ThriftServerProxy" init-method="start"  ></bean>
+    <bean id="thriftServerProxy" class="test.thrift.ThriftServerProxy" init-method="start"  ></bean>
 
     <bean id="transactionManagerForIbatis"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
@@ -60,7 +60,7 @@
     </tx:advice>
 
     <aop:config>
-        <aop:pointcut id="services" expression="execution(* test02.Infrastructure.service.*Service.*(..))"/>
+        <aop:pointcut id="services" expression="execution(* test.infrastructure.service.*Service.*(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="services" />
     </aop:config>
 </beans>

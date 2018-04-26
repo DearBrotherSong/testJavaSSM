@@ -3,9 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="test02.Infrastructure.sql.RoleMapper">
+<mapper namespace="test.infrastructure.sql.RoleMapper">
 
-    <resultMap id="BaseResultMap" type="test02.Data.RoleEntity" >
+    <resultMap id="BaseResultMap" type="test.data.RoleEntity" >
         <id column="id" property="id" jdbcType="BIGINT" />
         <result column="name" property="name" jdbcType="VARCHAR" />
         <result column="creation_time" property="creation_time" jdbcType="TIMESTAMP" />
@@ -42,13 +42,13 @@
         AND IF(#{id} > 0,id <![CDATA[ <> ]]> #{id},1);
     </select>
 
-    <insert id="addRole" keyColumn="id" parameterType="test02.Data.RoleEntity" useGeneratedKeys="true" keyProperty="id">
+    <insert id="addRole" keyColumn="id" parameterType="test.data.RoleEntity" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO
         role(name,createTime,state,description)
         VALUES(#{name},#{createTime},#{state},#{description});
     </insert>
 
-    <update id="updateById" parameterType="test02.Data.RoleEntity">
+    <update id="updateById" parameterType="test.data.RoleEntity">
         update role
         SET name=#{name},description=#{description}
         WHERE id=#{id};
