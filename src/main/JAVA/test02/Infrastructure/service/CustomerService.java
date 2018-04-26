@@ -110,8 +110,7 @@ public class CustomerService {
     /*
     获取用户信息
      */
-    public ConcurrentHashMap CustomerInfo(Long id,boolean isCurrent,HttpSession session)
-    {
+    public ConcurrentHashMap CustomerInfo(Long id,boolean isCurrent,HttpSession session) {
         if(isCurrent)
         {
             if(session.getAttribute("currentUser") == null)
@@ -129,8 +128,7 @@ public class CustomerService {
     /*
     获取用户列表
      */
-    public ConcurrentHashMap CustomerList(String userName,Long department_id,Integer page,Integer size)
-    {
+    public ConcurrentHashMap CustomerList(String userName,Long department_id,Integer page,Integer size) {
         int pageInt = page == null || page.intValue() < 1 ? 1 : page.intValue();
         int sizeInt = page == null || size.intValue() <1 ? 5 : size.intValue();
 
