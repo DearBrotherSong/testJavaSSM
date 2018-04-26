@@ -166,7 +166,7 @@ public class DepartmentService {
     /*
     添加部门事务
      */
-    @Transactional(rollbackFor={Exception.class})
+    @Transactional
     public ConcurrentHashMap AddAction( DepartmentEntity dept, DepartmentEntity parentDept)
     {
         _departmentMapper.addDepartment(dept);

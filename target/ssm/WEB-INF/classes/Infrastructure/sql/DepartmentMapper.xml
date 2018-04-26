@@ -68,7 +68,7 @@
     <update id="updateDepartmentPath" parameterType="test02.Data.DepartmentEntity" >
         UPDATE department
         SET
-        idPath=#{idPath},namePath=#{namePath}
+        idPath=#{idPath},namePath=#{namePathfff}
         WHERE id=#{id};
     </update>
 

@@ -46,6 +46,8 @@
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
+    <bean id="thriftServerProxy" class="test02.thrift.ThriftServerProxy" init-method="start"  ></bean>
+
     <bean id="transactionManagerForIbatis"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource" />
@@ -53,13 +55,12 @@
 
     <tx:advice id="txAdvice" transaction-manager="transactionManagerForIbatis">
         <tx:attributes>
-            <tx:method name="get*" read-only="true" />
-            <tx:method name="insert*" propagation="REQUIRED" />
-            <tx:method name="delete*" propagation="REQUIRED" />
-            <tx:method name="update*" propagation="REQUIRED" />
-            <tx:method name="*" propagation="REQUIRED" />
+            <tx:method name="*" propagation="REQUIRED" rollback-for="Exception"/>
         </tx:attributes>
     </tx:advice>
 
-    <bean id="thriftServerProxy" class="test02.thrift.ThriftServerProxy" init-method="start"  ></bean>
+    <aop:config>
+        <aop:pointcut id="services" expression="execution(* test02.Infrastructure.service.*Service.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="services" />
+    </aop:config>
 </beans>

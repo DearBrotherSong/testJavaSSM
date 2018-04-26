@@ -2,6 +2,7 @@ package test02.Infrastructure.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import test02.Data.CustomerEntity;
 import test02.Data.CustomerRoleEntity;
 import test02.Infrastructure.CommonTools.APIReturn;
@@ -200,6 +201,7 @@ public class CustomerService {
     /*
     删除人员
      */
+    @Transactional
     public ConcurrentHashMap DeleteCustomer(Long id){
         if(id==null)
             return new APIReturn().CheckParamFaild();
