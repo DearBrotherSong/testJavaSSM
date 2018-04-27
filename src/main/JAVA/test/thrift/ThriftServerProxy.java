@@ -12,35 +12,33 @@ import javax.servlet.annotation.WebServlet;
 服务器（非阻塞多线程）
  */
 @WebServlet("/thrift")
-public class ThriftServerProxy{
+public class ThriftServerProxy {
 
     private static final long serialVersionUID = 2L;
     private static TServer _SERVER = null;
-    private static int SERVER_PORT = 8100;
+    private static int _SERVER_PORT = 8100;
 
     @PostConstruct
-    public void start() throws  Exception{
-        Thread serverThread = new Thread(){
-            public void run(){
+    public void start() throws  Exception {
+        Thread serverThread = new Thread() {
+            public void run() {
                 try {
 
                     // 处理器
                     TProcessor tprocessor = new ThriftService.Processor<ThriftService.Iface>(new ThriftServiceImpl());
                     // 传输通道 - 非阻塞方式
-                    TNonblockingServerSocket serverTransport = new TNonblockingServerSocket(SERVER_PORT);
-                    TNonblockingServer.Args tArgs = new TNonblockingServer.Args(serverTransport);
-                    tArgs.processor(tprocessor);
+                    TNonblockingServerSocket serverTransport = new TNonblockingServerSocket(_SERVER_PORT);
+                    TNonblockingServer.Args thriftArgs = new TNonblockingServer.Args(serverTransport);
+                    thriftArgs.processor(tprocessor);
 
                     // 使用高密度二进制协议
-                    tArgs.protocolFactory(new TCompactProtocol.Factory());
-                    //tArgs.transportFactory(new TFramedTransport.Factory()); 二进制协议
-                    TServer server = new TNonblockingServer(tArgs);
+                    thriftArgs.protocolFactory(new TCompactProtocol.Factory());
+                    //thriftArgs.transportFactory(new TFramedTransport.Factory()); 二进制协议
+                    TServer server = new TNonblockingServer(thriftArgs);
 
                     System.out.println("server start...");
                     server.serve(); // 启动服务
-                }
-                catch (Exception e)
-                {
+                } catch (Exception e) {
                     //// TODO: 2018/4/23 日志 
                 }
             }
@@ -48,7 +46,8 @@ public class ThriftServerProxy{
         serverThread.start();
 
     }
-    public void stop() throws Exception{
+
+    public void stop() throws Exception {
         _SERVER.stop();
     }
 }

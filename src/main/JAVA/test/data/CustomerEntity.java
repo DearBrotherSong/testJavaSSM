@@ -4,95 +4,95 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 //用户实体类
-public class CustomerEntity implements Serializable{
-    private Long id;
-    private String userName;
-    private String nickName;
-    private String email;
-    private String password;
-    private Timestamp creation_time;
-    private Timestamp last_loin_time;
-    private int state;
-    private Long department_id;
-    private String department_Name;
+public class CustomerEntity implements Serializable {
+    private Long _id;
+    private String _userName;
+    private String _nickName;
+    private String _email;
+    private String _password;
+    private Timestamp _creationTime;
+    private Timestamp _lastLoinTime;
+    private int _state;
+    private Long _departmentId;
+    private String _departmentName;
 
     public Long getId() {
-        return id;
+        return _id;
     }
 
     public void setId(long id) {
-        this.id = id;
+        this._id = id;
     }
 
     public String getUserName() {
-        return userName;
+        return _userName;
     }
 
     public void setUserName(String userName) {
-        this.userName = userName;
+        this._userName = userName;
     }
 
     public String getNickName() {
-        return nickName;
+        return _nickName;
     }
 
     public void setNickName(String nickName) {
-        this.nickName = nickName;
+        this._nickName = nickName;
     }
 
     public String getEmail() {
-        return email;
+        return _email;
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this._email = email;
     }
 
     public String getPassword() {
-        return password;
+        return _password;
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this._password = password;
     }
 
-    public Timestamp getCreation_time() {
-        return creation_time;
+    public Timestamp getCreationTime() {
+        return _creationTime;
     }
 
-    public void setCreation_time(Timestamp creation_time) {
-        this.creation_time = creation_time;
+    public void setCreationTime(Timestamp creationTime) {
+        this._creationTime = creationTime;
     }
 
-    public Timestamp getLast_loin_time() {
-        return last_loin_time;
+    public Timestamp getLastLoinTime() {
+        return _lastLoinTime;
     }
 
-    public void setLast_loin_time(Timestamp last_loin_time) {
-        this.last_loin_time = last_loin_time;
+    public void setLastLoinTime(Timestamp lastLoinTime) {
+        this._lastLoinTime = lastLoinTime;
     }
 
     public int getState() {
-        return state;
+        return _state;
     }
 
     public void setState(int state) {
-        state = state;
+        this._state = state;
     }
 
-    public Long getDepartment_id() {
-        return department_id;
+    public Long getDepartmentId() {
+        return _departmentId;
     }
 
-    public void setDepartment_id(long department_id) {
-        this.department_id = department_id;
+    public void setDepartmentId(long departmentId) {
+        this._departmentId = departmentId;
     }
 
-    public String getDepartment_Name() {
-        return department_Name;
+    public String getDepartmentName() {
+        return _departmentName;
     }
 
-    public void setDepartment_Name(String department_Name) {
-        this.department_Name = department_Name;
+    public void setDepartmentName(String departmentName) {
+        this._departmentName = departmentName;
     }
 }

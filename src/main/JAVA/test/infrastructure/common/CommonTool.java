@@ -1,4 +1,4 @@
-package test.infrastructure.commonTools;
+package test.infrastructure.common;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -10,12 +10,12 @@ import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 
 //公共工具类
-public class CommonTool{
+public class CommonTool {
 
     /*
     公共工具
      */
-    public static class Tools{
+    public static class Tools {
         /*
         MD5算法，用于处理密码
          */
@@ -26,10 +26,11 @@ public class CommonTool{
         /*
         验证邮箱格式（简单规则）
          */
-        public static boolean CheckEmailFormat(String email)
-        {
-            if(isNullOrWhiteSpace(email))
+        public static boolean checkEmailFormat(String email) {
+            if (isNullOrWhiteSpace(email)) {
                 return false;
+            }
+
             //规则：大小写字母或数字记为X。 X（至少一次） + @ + X（至少一次）+ （-X）（0次或1次）+ .+ X（非数字）（2次以上）
             String format = "^([a-zA-Z0-9_-])+@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?.)+[a-zA-Z]{2,}$";
             return email.matches(format);
@@ -38,20 +39,21 @@ public class CommonTool{
         /*
         空验证
          */
-        public static boolean isNullOrWhiteSpace(String data)
-        {
-            if(data == null)
+        public static boolean isNullOrWhiteSpace(String data) {
+            if (data == null) {
                 return true;
-            if(data.trim().equals(""))
+            }
+            if (data.trim().equals("")) {
                 return true;
+            }
+
             return false;
         }
 
         /*
         字符串拼接工具
          */
-        public static String stringConcat(String... params)
-        {
+        public static String stringConcat(String... params) {
             String result = "";
             for (String item:params) {
                 result = result.concat(item);
@@ -62,23 +64,23 @@ public class CommonTool{
         /*
         实体类转ConcurrentHashMap
          */
-        public static ConcurrentHashMap entityToMap(Object entity){
+        public static ConcurrentHashMap entityToMap(Object entity) {
             ConcurrentHashMap result = new ConcurrentHashMap();
             try {
                 for (Field field : entity.getClass().getDeclaredFields()) {
                     field.setAccessible(true);
-                    result.put(field.getName(),field.get(entity));
+                    result.put(field.getName().replace("_",""),field.get(entity));
                 }
 
-            }catch (Exception e){}
+            } catch (Exception e) { }
+
             return result;
         }
 
         /*
         读取properties文件
          */
-        public static ConcurrentHashMap<String,String> GetPropertiesMap(String propertiesName)
-        {
+        public static ConcurrentHashMap<String,String> getPropertiesMap(String propertiesName) {
             ConcurrentHashMap<String,String> result = new ConcurrentHashMap<String, String>();
             try {
                 Properties properties = new Properties();
@@ -87,18 +89,19 @@ public class CommonTool{
                 properties.load(stream);
                 Enumeration key = properties.propertyNames();
 
-                while(key.hasMoreElements()) {
+                while (key.hasMoreElements()) {
                     String thisKey = key.nextElement().toString();
                     result.put(thisKey,properties.getProperty(thisKey));
                 }
                 stream.close();
                 return result;
-            }catch (Exception e) {
+            } catch (Exception e) {
                 return null;
             }
 
         }
-        public static String DecodeBase64(String param){
+
+        public static String decodeBase64(String param) {
             byte[] bytes = Base64.decodeBase64(param);
             return new String(bytes);
         }
@@ -108,7 +111,7 @@ public class CommonTool{
     /*
     返回提示表
      */
-    public static enum  CodeEnum{
+    public static enum  CodeEnum {
         //公共
         TokenWrong("系统错误（token错误）", 500),
         Success("操作成功", 1),
@@ -143,59 +146,72 @@ public class CommonTool{
 
 
         // 成员变量
-        private String message;
-        private int code;
+        private String _message;
+        private int _code;
         // 构造方法
         private CodeEnum(String message, int code) {
-            this.message = message;
-            this.code = code;
+            this._message = message;
+            this._code = code;
         }
 
         public String getMessage() {
-            return message;
+            return _message;
         }
+
         public void setMessage(String message) {
-            this.message = message;
+            this._message = message;
         }
+
         public int getCode() {
-            return code;
+            return _code;
         }
+
         public void setCode(int code) {
-            this.code = code;
+            this._code = code;
         }
     }
+
     /*
     数据状态（0：启用；1：禁用）
      */
-    public static enum  State{
+    public static enum  State {
         StateOn(0),StateOff(1);
 
-        private int state;
+        private int _state;
+
         // 构造方法
         private State(int state) {
-            this.state = state;
+            this._state = state;
         }
+
         public int getState() {
-            return state;
+            return _state;
         }
+
         public void setState(int state) {
-            this.state = state;
+            this._state = state;
         }
     }
+
     /*
     数据状态（0：启用；1：禁用）
      */
-    public static enum  SessionTime{
+    public static enum  SessionTime {
         Default(30);
 
-        private int time;
+        private int _time;
+
         // 构造方法
         private SessionTime(int time) {
-            this.time = time;
+            this._time = time;
         }
-        public int getDefault() { return time; }
+
+        public int getDefault() {
+            return _time;
+        }
+
         public void setDefault(int time) {
-            this.time = time;
+            this._time = time;
         }
     }
 }

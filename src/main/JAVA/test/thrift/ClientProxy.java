@@ -8,11 +8,11 @@ import org.apache.thrift.transport.*;
 客户端
  */
 public class ClientProxy {
-    public static final  String SERVER_IP="127.0.0.1";
-    public static final int SERVER_PORT=8100;
-    public static final int TIME_OUT=10000;
+    public static final  String SERVER_IP = "127.0.0.1";
+    public static final int SERVER_PORT = 8100;
+    public static final int TIME_OUT = 10000;
 
-    public String start(String param) throws Exception{
+    public String start(String param) throws Exception {
         System.out.println("client start...");
 
         TTransport transport = new TFramedTransport(new TSocket(SERVER_IP, SERVER_PORT,TIME_OUT));

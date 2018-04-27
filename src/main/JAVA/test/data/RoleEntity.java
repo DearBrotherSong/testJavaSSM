@@ -4,50 +4,50 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 public class RoleEntity implements Serializable {
-    private Long id;
-    private String name;
-    private String description;
-    private Timestamp createTime;
-    private int state;
+    private Long _id;
+    private String _name;
+    private String _description;
+    private Timestamp _createTime;
+    private int _state;
 
 
     public Long getId() {
-        return id;
+        return _id;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this._id = id;
     }
 
     public String getName() {
-        return name;
+        return _name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this._name = name;
     }
 
     public String getDescription() {
-        return description;
+        return _description;
     }
 
     public void setDescription(String description) {
-        this.description = description;
+        this._description = description;
     }
 
     public Timestamp getCreateTime() {
-        return createTime;
+        return _createTime;
     }
 
     public void setCreateTime(Timestamp createTime) {
-        this.createTime = createTime;
+        this._createTime = createTime;
     }
 
     public int getState() {
-        return state;
+        return _state;
     }
 
     public void setState(int state) {
-        this.state = state;
+        this._state = state;
     }
 }

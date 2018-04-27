@@ -10,9 +10,10 @@
         <result column="userName" property="userName" jdbcType="VARCHAR" />
         <result column="nickName" property="nickName" jdbcType="VARCHAR" />
         <result column="email" property="email" jdbcType="VARCHAR" />
-        <result column="creation_time" property="creation_time" jdbcType="TIMESTAMP" />
-        <result column="last_login_time" property="last_loin_time" jdbcType="TIMESTAMP" />
-        <result column="department_id" property="department_id" jdbcType="BIGINT" />
+        <result column="creation_time" property="creationTime" jdbcType="TIMESTAMP" />
+        <result column="last_login_time" property="lastLoinTime" jdbcType="TIMESTAMP" />
+        <result column="department_id" property="departmentId" jdbcType="BIGINT" />
+        <result column="department_name" property="departmentName" jdbcType="BIGINT" />
         <result column="password" property="password" jdbcType="VARCHAR" />
         <result column="state" property="state" jdbcType="INTEGER" />
     </resultMap>

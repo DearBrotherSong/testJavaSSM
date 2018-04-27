@@ -16,7 +16,7 @@ public class RoleController {
     private RoleService _roleService;
 
     @Autowired
-    public RoleController(RoleService roleService){
+    public RoleController(RoleService roleService) {
         this._roleService = roleService;
     }
 
@@ -25,32 +25,35 @@ public class RoleController {
      */
     @RequestMapping(value = "",method = RequestMethod.POST)
     @ResponseBody
-    public ConcurrentHashMap AddRole(String name, String description){
-        return  _roleService.AddRole(name,description);
+    public ConcurrentHashMap addRole(String name, String description) {
+        return  _roleService.addRole(name,description);
     }
+
     /*
     修改角色
      */
     @RequestMapping(value = "/{id}",method = RequestMethod.PUT)
     @ResponseBody
-    public ConcurrentHashMap UpdateRole(@PathVariable("id") Long id,String name,String description){
-        return  _roleService.UpdateRole(id,name,description);
+    public ConcurrentHashMap updateRole(@PathVariable("id") Long id,String name,String description) {
+        return  _roleService.updateRole(id,name,description);
     }
+
     /*
     删除角色
      */
     @RequestMapping(value = "/{id}",method = RequestMethod.DELETE)
     @ResponseBody
-    public ConcurrentHashMap DeleteRole(@PathVariable("id") Long id){
-        return  _roleService.DeleteRole(id);
+    public ConcurrentHashMap deleteRole(@PathVariable("id") Long id) {
+        return  _roleService.deleteRole(id);
     }
+
     /*
     角色列表
      */
     @RequestMapping(value = "",method = RequestMethod.GET)
     @ResponseBody
-    public ConcurrentHashMap RoleList(){
-        return  _roleService.RoleList();
+    public ConcurrentHashMap roleList() {
+        return  _roleService.roleList();
     }
 
 }

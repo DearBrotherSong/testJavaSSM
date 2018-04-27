@@ -16,44 +16,49 @@ public class DepartmentController {
     private DepartmentService _departmentService;
 
     @Autowired
-    public DepartmentController(DepartmentService departmentService){
+    public DepartmentController(DepartmentService departmentService) {
         this._departmentService = departmentService;
     }
+
     @RequestMapping("/init")
     @ResponseBody
     public ConcurrentHashMap initDepartment() {
-        return  _departmentService.InitDepartment();
+        return  _departmentService.initDepartment();
     }
+
     /*
     获取部门列表（或树结构）
      */
     @RequestMapping(value = "", method = RequestMethod.GET)
     @ResponseBody
     public ConcurrentHashMap allDepartment(boolean isTree) {
-        return  _departmentService.FindAll(isTree);
+        return  _departmentService.findAll(isTree);
     }
+
     /*
     添加部门
      */
     @RequestMapping(value = "", method = RequestMethod.POST)
     @ResponseBody
     public ConcurrentHashMap addDepartment(String name,Long parentId,String managerEmail,String description) {
-        return  _departmentService.AddDepartment(name,parentId,managerEmail,description);
+        return  _departmentService.addDepartment(name,parentId,managerEmail,description);
     }
+
     /*
     修改部门
      */
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     @ResponseBody
     public ConcurrentHashMap updateDepartment(@PathVariable("id") Long id, String name, String managerEmail, String description) {
-        return  _departmentService.UpdateDepartment(id,name,managerEmail,description);
+        return  _departmentService.updateDepartment(id,name,managerEmail,description);
     }
+
     /*
     删除部门
      */
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     @ResponseBody
     public ConcurrentHashMap deleteDepartment(@PathVariable("id") Long id) {
-        return  _departmentService.DeleteDepartment(id);
+        return  _departmentService.deleteDepartment(id);
     }
 }

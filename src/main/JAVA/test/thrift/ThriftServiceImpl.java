@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class ThriftServiceImpl implements ThriftService.Iface {
     @Override
     public String ThriftApi(String data) throws TException {
-        System.out.println("service recieve ->"+data);
-        return "server get String "+data;
+        System.out.println("service recieve ->" + data);
+        return "server get String " + data;
     }
 }

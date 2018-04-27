@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class GlobalExceptionHandle {
     @ExceptionHandler(Exception.class)
     @ResponseBody
-    public String handleException(Exception ex){
+    public String handleException(Exception excepttion) {
+        System.out.println(excepttion);
         return "我的天呐！！！";
     }
 

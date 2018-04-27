@@ -1,6 +1,6 @@
 package test.thrift;
 
-public class serviceTest {
+public class ServiceTest {
     public static void main(String[] args) throws Exception {
 
         ThriftServerProxy serverProxy = new ThriftServerProxy();

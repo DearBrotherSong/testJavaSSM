@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import test.data.RoleEntity;
-import test.infrastructure.commonTools.APIReturn;
-import test.infrastructure.commonTools.CommonTool;
+import test.infrastructure.common.ApiReturn;
+import test.infrastructure.common.CommonTool;
 import test.infrastructure.sql.CustomerRoleMapper;
 import test.infrastructure.sql.RoleMapper;
 
@@ -28,13 +28,17 @@ public class RoleService {
     /*
     添加角色
      */
-    public ConcurrentHashMap AddRole(String name,String description){
-        if(CommonTool.Tools.isNullOrWhiteSpace(name) || name.length() > 50 ||
-                (!CommonTool.Tools.isNullOrWhiteSpace(name) && description.length() >200))
-            return new APIReturn().CheckParamFaild();
+    public ConcurrentHashMap addRole(String name,String description) {
+        if (CommonTool.Tools.isNullOrWhiteSpace(name)
+                || name.length() > 50
+                || (!CommonTool.Tools.isNullOrWhiteSpace(name) && description.length() > 200)) {
+            return new ApiReturn().checkParamFaild();
+        }
 
-        if(_roleMapper.getByName(name,(long)0) != null)
-            return new APIReturn().RoleNameCheckFail();
+
+        if (_roleMapper.getByName(name,(long)0) != null) {
+            return new ApiReturn().roleNameCheckFail();
+        }
 
         RoleEntity role = new RoleEntity();
         Timestamp now = new Timestamp(System.currentTimeMillis());
@@ -45,35 +49,38 @@ public class RoleService {
 
         try {
             _roleMapper.addRole(role);
-        }catch (Exception e){
-            return new APIReturn().UnknownExceptionProduce();
+        } catch (Exception e) {
+            return new ApiReturn().unknownExceptionProduce();
         }
-        return new APIReturn().Success();
+        return new ApiReturn().success();
     }
 
     /*
     修改角色
      */
-    public ConcurrentHashMap UpdateRole(Long id,String name,String description)
+    public ConcurrentHashMap updateRole(Long id,String name,String description)
     {
-        if(CommonTool.Tools.isNullOrWhiteSpace(name) || name.length() > 50 ||
-                (!CommonTool.Tools.isNullOrWhiteSpace(name) && description.length() >200))
-            return new APIReturn().CheckParamFaild();
+        if (CommonTool.Tools.isNullOrWhiteSpace(name)
+                || name.length() > 50
+                || (!CommonTool.Tools.isNullOrWhiteSpace(name) && description.length() > 200)) {
+            return new ApiReturn().checkParamFaild();
+        }
 
         RoleEntity currentRole = _roleMapper.getById(id);
-        if(currentRole == null)
-            return new APIReturn().RoleIdCheckFail();
-        if(_roleMapper.getByName(name,id) != null)
-            return new APIReturn().RoleNameCheckFail();
-
+        if (currentRole == null) {
+            return new ApiReturn().roleIdCheckFail();
+        }
+        if (_roleMapper.getByName(name,id) != null) {
+            return new ApiReturn().roleNameCheckFail();
+        }
         try {
             currentRole.setName(name);
             currentRole.setDescription(description);
             _roleMapper.updateById(currentRole);
-        }catch (Exception e){
-            return new APIReturn().UnknownExceptionProduce();
+        } catch (Exception e) {
+            return new ApiReturn().unknownExceptionProduce();
         }
-        return new APIReturn().Success();
+        return new ApiReturn().success();
 
     }
 
@@ -81,38 +88,39 @@ public class RoleService {
     删除角色
      */
     @Transactional
-    public ConcurrentHashMap DeleteRole(Long id)
-    {
+    public ConcurrentHashMap deleteRole(Long id) {
         RoleEntity currentRole = _roleMapper.getById(id);
-        if(currentRole == null)
-            return new APIReturn().RoleIdCheckFail();
+        if (currentRole == null) {
+            return new ApiReturn().roleIdCheckFail();
+        }
 
         try {
             _customerRoleMapper.deleteByRoleId(id);
             _roleMapper.deleteById(id);
-        }catch (Exception e){
-            return new APIReturn().UnknownExceptionProduce();
+        } catch (Exception e) {
+            return new ApiReturn().unknownExceptionProduce();
         }
-        return new APIReturn().Success();
+        return new ApiReturn().success();
     }
 
     /*
     角色列表
      */
-    public ConcurrentHashMap RoleList()
+    public ConcurrentHashMap roleList()
     {
         List<RoleEntity> roleList = _roleMapper.findAll();
-        return new APIReturn().apiReturn(CommonTool.CodeEnum.Success.getCode(),"",roleList);
+        return new ApiReturn().apiReturn(CommonTool.CodeEnum.Success.getCode(),"",roleList);
     }
+
     /*
     角色详情
      */
-    public ConcurrentHashMap RoleInfo(Long id)
-    {
+    public ConcurrentHashMap roleInfo(Long id) {
         RoleEntity roleInfo = _roleMapper.getById(id);
-        if(roleInfo == null)
-            return new APIReturn().RoleIdCheckFail();
-        return new APIReturn().apiReturn(CommonTool.CodeEnum.Success.getCode(),"",roleInfo);
+        if (roleInfo == null) {
+            return new ApiReturn().roleIdCheckFail();
+        }
+        return new ApiReturn().apiReturn(CommonTool.CodeEnum.Success.getCode(),"",roleInfo);
 
     }
 }

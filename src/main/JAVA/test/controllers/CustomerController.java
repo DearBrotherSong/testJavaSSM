@@ -31,7 +31,7 @@ public class CustomerController {
     @ResponseBody
     public ConcurrentHashMap regist(String customerJson) {
         CustomerEntity customer = JSON.parseObject(customerJson,CustomerEntity.class);
-        return _customerService.Register(customer);
+        return _customerService.register(customer);
     }
 
     /*
@@ -40,7 +40,7 @@ public class CustomerController {
     @RequestMapping(value = "/csutomerInfo",method = RequestMethod.POST)
     @ResponseBody
     public ConcurrentHashMap customerInfo(Long id,HttpSession session) {
-        return _customerService.CustomerInfo(id,false,session);
+        return _customerService.customerInfo(id,false,session);
     }
 
     /*
@@ -49,7 +49,7 @@ public class CustomerController {
     @RequestMapping(value = "",method = RequestMethod.GET)
     @ResponseBody
     public ConcurrentHashMap customerList(String userName,Long departmentId,Integer page,Integer size) {
-        return _customerService.CustomerList(userName,departmentId,page,size);
+        return _customerService.customerList(userName,departmentId,page,size);
     }
 
     /*
@@ -58,7 +58,7 @@ public class CustomerController {
     @RequestMapping(value = "",method = RequestMethod.PUT)
     @ResponseBody
     public ConcurrentHashMap updateCustomer(Long userId,String nickName,String email,Long departmentId,HttpSession session) {
-        return _customerService.UpdateCustomer(userId,nickName,email,departmentId,false,session);
+        return _customerService.updateCustomer(userId,nickName,email,departmentId,false,session);
     }
 
     /*
@@ -67,7 +67,7 @@ public class CustomerController {
     @RequestMapping(value = "/{id}/reset-password",method = RequestMethod.POST)
     @ResponseBody
     public ConcurrentHashMap resetPassword(@PathVariable("id") Long id, String newPassword, String confirmPassword) {
-        return _customerService.ResetPassword(id,newPassword,confirmPassword);
+        return _customerService.resetPassword(id,newPassword,confirmPassword);
     }
 
     /*
@@ -76,7 +76,7 @@ public class CustomerController {
     @RequestMapping(value = "",method = RequestMethod.DELETE)
     @ResponseBody
     public ConcurrentHashMap deleteCustomer(Long id) {
-        return _customerService.DeleteCustomer(id);
+        return _customerService.deleteCustomer(id);
     }
 
     /*
@@ -85,6 +85,6 @@ public class CustomerController {
     @RequestMapping("/addCustomerRole")
     @ResponseBody
     public ConcurrentHashMap addCustomerRole(Long customerId,Long roleId) {
-        return _customerService.AddCustomerRole(customerId,roleId);
+        return _customerService.addCustomerRole(customerId,roleId);
     }
 }

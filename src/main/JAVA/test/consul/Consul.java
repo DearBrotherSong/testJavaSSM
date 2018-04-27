@@ -5,7 +5,7 @@ import com.ecwid.consul.v1.ConsulRawClient;
 import com.ecwid.consul.v1.agent.model.NewService;
 import com.ecwid.consul.v1.agent.model.Service;
 import com.ecwid.consul.v1.kv.model.GetValue;
-import test.infrastructure.commonTools.CommonTool;
+import test.infrastructure.common.CommonTool;
 
 import java.util.List;
 import java.util.Map;
@@ -17,7 +17,7 @@ public class Consul {
 
     public Consul(){
 
-        ConcurrentHashMap properties = CommonTool.Tools.GetPropertiesMap("consul.properties");
+        ConcurrentHashMap properties = CommonTool.Tools.getPropertiesMap("consul.properties");
         String host = properties.get("host").toString();
         int port = Integer.parseInt(properties.get("port").toString());
 
@@ -64,7 +64,7 @@ public class Consul {
     public String getKVValue(String key){
         GetValue value = _consulClient.getKVValue(key).getValue();
         String trueValue = value.getValue();
-        String result = CommonTool.Tools.DecodeBase64(trueValue);
+        String result = CommonTool.Tools.decodeBase64(trueValue);
 
         return result;
     }

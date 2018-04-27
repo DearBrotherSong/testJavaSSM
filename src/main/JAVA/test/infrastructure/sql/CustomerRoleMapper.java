@@ -7,9 +7,13 @@ import test.data.CustomerRoleEntity;
 @Repository
 public interface CustomerRoleMapper {
     public CustomerRoleEntity getByCustomerIdAndRoleId(CustomerRoleEntity customerRoleEntity);
+
     public void deleteByCustomerIdAndRoleId(CustomerRoleEntity customerRoleEntity);
+
     public int insert(CustomerRoleEntity customerRoleEntity);
+
     public int deleteByCustomerId(@Param("customerId") Long customerId);
+
     public void deleteByRoleId(@Param("roleId") Long roleId);
 
 }

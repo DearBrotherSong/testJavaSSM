@@ -12,7 +12,7 @@ public class TestController {
 
     @RequestMapping(value = "",method = RequestMethod.GET)
     @ResponseBody
-    public String Test(String param) throws Exception {
+    public String test(String param) throws Exception {
         String result = "";
         /*
         //thriftTest
@@ -23,15 +23,14 @@ public class TestController {
 
 
         //ConsulTest
-        long startTime1=System.currentTimeMillis();
-        String KVValue = ConsulProxy._consul.getKVValue("KVTest");
-        long startTime2=System.currentTimeMillis();
+        long startTime1 = System.currentTimeMillis();
+        String kvValue = ConsulProxy._consul.getKVValue("KVTest");
+        long startTime2 = System.currentTimeMillis();
 
         ConsulProxy._consul.getKVValuesByPreFix("KV");
-        long endTime=System.currentTimeMillis();
+        long endTime = System.currentTimeMillis();
 
-        result = KVValue + "   time1 ->"+(startTime2-startTime1)+" ms    time2 ->"+(endTime-startTime2)+" ms";
-
+        result = kvValue + "   time1 ->" + (startTime2 - startTime1) + " ms    time2 ->" + (endTime - startTime2) + " ms";
 
         return result;
     }
