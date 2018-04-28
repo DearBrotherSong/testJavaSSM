@@ -39,11 +39,11 @@
         <property name="prefix" value="/webroot/" />
         <property name="suffix" value=".html" />
     </bean>
-    <!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
-    <context:component-scan base-package="test.controllers"/>
+    <!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器
+    <context:component-scan base-package="test.controllers"/>-->
     <!-- 扩充了注解驱动，可以将请求参数绑定到控制器参数 -->
     <mvc:default-servlet-handler/>
-
+    <context:component-scan base-package="test.configs"/>
     <!-- ②：启动Spring MVC的注解功能，完成请求和注解POJO的映射 -->
     <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
         <property name="messageConverters">
@@ -52,12 +52,6 @@
             </list>
         </property>
     </bean>
-    <!-- 拦截器 -->
-    <mvc:interceptors>
-        <!-- 国际化操作拦截器 如果采用基于（请求/Session/Cookie）则必需配置 -->
-        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" />
-    </mvc:interceptors>
-
     <bean id="mappingJacksonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
         <property name="supportedMediaTypes">
             <list>
@@ -65,6 +59,7 @@
             </list>
         </property>
     </bean>
+
     <!-- 配置拦截器 -->
     <mvc:interceptors>
         <mvc:interceptor>

@@ -13,7 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class Consul {
 
-    private static ConsulClient _consulClient;
+    private ConsulClient _consulClient;
 
     public Consul(){
 

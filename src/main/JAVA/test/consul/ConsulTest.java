@@ -9,8 +9,6 @@ public class ConsulTest {
         //consul.setKVValue("","");
         //consul.getKVValuesByPreFix("KV");
         long startTime1=System.currentTimeMillis();
-        ConsulProxy cccc= new ConsulProxy();
-        Consul consul = ConsulProxy._consul;
         ConsulProxy._consul.getKVValue("KVTest");
         long startTime2=System.currentTimeMillis();
 
