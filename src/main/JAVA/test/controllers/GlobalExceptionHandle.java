@@ -10,7 +10,7 @@ public class GlobalExceptionHandle {
     @ResponseBody
     public String handleException(Exception excepttion) {
         System.out.println(excepttion);
-        return "我的天呐！！！";
+        return "FUCK Exception！！！";
     }
 
 }
